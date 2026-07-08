@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dinhtonhu62-code.github.io/dinhtonhu.github.io/sitemap.xml

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://dinhtonhu62-code.github.io/dinhtonhu.github.io/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://dinhtonhu62-code.github.io/dinhtonhu.github.io/projects/eyedia.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dinhtonhu62-code.github.io/dinhtonhu.github.io/projects/cozy-knit.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dinhtonhu62-code.github.io/dinhtonhu.github.io/experience/anya-content-creator.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dinhtonhu62-code.github.io/dinhtonhu.github.io/experience/anya-customer-care.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dinhtonhu62-code.github.io/dinhtonhu.github.io/experience/huseco-marketing-intern.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

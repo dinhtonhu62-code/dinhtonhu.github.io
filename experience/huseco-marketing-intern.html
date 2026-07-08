@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Thực tập sinh Marketing — Huseco | Đinh Thị Tố Như</title>
+  <meta name="description" content="Kinh nghiệm thực tập sinh Marketing tại Huseco: quản lý Fanpage, chạy quảng cáo Facebook Ads, thiết kế nội dung sản phẩm." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1E9BD7" />
+
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- ============ ICON SPRITE ============ -->
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5,12 12,5 19,12"/></symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12,19 5,12 12,5"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+    <symbol id="icon-external-link" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></symbol>
+  </svg>
+
+  <!-- ============ LOADER ============ -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__mark">N.</div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ============ SCROLL PROGRESS BAR ============ -->
+  <div class="scroll-progress"><div class="scroll-progress__bar" id="scrollProgressBar"></div></div>
+
+  <a class="skip-link" href="#main">Bỏ qua tới nội dung chính</a>
+
+  <!-- ============ HEADER / NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="../index.html#home" class="navbar__logo" aria-label="Về trang chủ">Đinh Thị Tố Như<span class="navbar__logo-dot">.</span></a>
+
+      <nav class="navbar__nav" id="navMenu" aria-label="Menu chính">
+        <ul class="navbar__list">
+          <li><a href="../index.html#home" class="navbar__link" data-nav>Trang chủ</a></li>
+          <li><a href="../index.html#experience" class="navbar__link" data-nav>Kinh nghiệm</a></li>
+          <li><a href="../index.html#contact" class="navbar__link" data-nav>Liên hệ</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="../assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--primary btn--sm">Download CV</a>
+        <button class="navbar__toggle" id="navToggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="navMenu">
+          <svg class="icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ EXPERIENCE HERO ============ -->
+    <section class="experience-hero">
+      <div class="container">
+        <a href="../index.html#experience" class="btn btn--outline btn--sm experience-hero__back">
+          <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+          Quay lại kinh nghiệm làm việc
+        </a>
+        <p class="section-tag">Kinh nghiệm</p>
+        <h1 class="section-title">Thực tập sinh Marketing</h1>
+        <p class="experience-hero__company">Huseco</p>
+        <div class="experience-hero__meta">
+          <span class="timeline__duration">9/2023 — 1/2024</span>
+          <span class="tag">Facebook Ads</span>
+          <span class="tag">Content</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE DETAIL ============ -->
+    <section class="experience-detail">
+      <div class="container experience-detail__content">
+        <h2>Mô tả công việc</h2>
+        <p>
+          Trong thời gian thực tập tại Huseco, tôi phụ trách nội dung Fanpage, chạy quảng cáo Facebook Ads và hỗ trợ
+          sản xuất hình ảnh sản phẩm, phối hợp cùng bộ phận Sales để đảm bảo nội dung marketing thống nhất.
+        </p>
+
+        <h2>Công việc thực hiện</h2>
+        <ul>
+          <li>Lên kế hoạch và viết bài cho Fanpage của công ty trên nền tảng Facebook</li>
+          <li>Chạy quảng cáo Facebook Ads cho fanpage, tăng 10k follower</li>
+          <li>Thiết kế, quay chụp cho sản phẩm của công ty</li>
+          <li>Phối hợp với bộ phận Sales để nội dung thống nhất với các chiến dịch marketing của công ty</li>
+        </ul>
+
+        <h2>Bài viết nổi bật trên Fanpage</h2>
+        <p>
+          Một số bài viết tôi đã lên kế hoạch và sản xuất nội dung cho Fanpage NOVA Health (thương hiệu máy lọc nước
+          Huseco). Xem thêm tại Fanpage chính thức.
+        </p>
+        <a href="https://www.facebook.com/NovaHealthVN" target="_blank" rel="noopener noreferrer" class="btn btn--primary tiktok-channel-link">
+          Xem Fanpage NOVA Health <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+        </a>
+
+        <div class="post-gallery">
+          <a href="https://www.facebook.com/NovaHealthVN/posts/pfbid02kkK2mAmgHpQjQGsjPNDTMvYCuqzNm7E3buwqP76VQtFdG76Y3ecnD1Ef1mMScForl" target="_blank" rel="noopener noreferrer" class="post-card">
+            <img src="../assets/images/experience/facebook-post-1.png" alt="Bài viết Fanpage về máy lọc nước bảo vệ môi trường" loading="lazy" />
+            <span class="post-card__label">Bài viết 1 <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg></span>
+          </a>
+                    <a href="https://www.facebook.com/NovaHealthVN/posts/pfbid0mDccVpiPyVS9igS352AUzuVRwzNUZczi7YEAjVNshD186ALcEUvnyCyi8NDoNYERl" target="_blank" rel="noopener noreferrer" class="post-card">
+            <img src="../assets/images/experience/facebook-post-2.png" alt="Bài viết Fanpage giới thiệu máy lọc nước F7" loading="lazy" />
+            <span class="post-card__label">Bài viết 2 <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg></span>
+          </a>
+          <a href="https://www.facebook.com/NovaHealthVN/posts/pfbid0a9MGDw7pEVhdLdFBKBXpHpc2CVXY8Xre7ieGW1MQzNnZ3Tv9XdDRDvazQMS53F1cl" target="_blank" rel="noopener noreferrer" class="post-card">
+            <img src="../assets/images/experience/facebook-post-3.png" alt="Bài viết Fanpage về lượng nước cần nạp cho cơ thể" loading="lazy" />
+            <span class="post-card__label">Bài viết 3 <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg></span>
+          </a>
+        </div>
+
+        <div class="experience-detail__nav">
+          <a href="anya-customer-care.html" class="btn btn--ghost btn--sm">
+            <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> Kinh nghiệm trước
+          </a>
+          <a href="../index.html#experience" class="btn btn--primary btn--sm">Tất cả kinh nghiệm</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="year"></span> Đinh Thị Tố Như. All rights reserved.</p>
+      <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
+      </button>
+    </div>
+  </footer>
+
+  <script src="../js/script.js" defer></script>
+</body>
+</html>
