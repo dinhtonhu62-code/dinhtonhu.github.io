@@ -1227,6 +1227,105 @@ textarea:focus-visible {
   }
 }
 
+/* ---------- 13d. Media gallery + lightbox (dùng cho trang Kinh nghiệm & Dự án) ---------- */
+.media-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.media-gallery__item {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.media-gallery__item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.media-gallery__item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.media-gallery__empty {
+  grid-column: 1 / -1;
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 14.5px;
+  background: var(--color-bg-alt);
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius);
+}
+
+@media (max-width: 560px) {
+  .media-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: rgba(15, 23, 42, 0.88);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s var(--ease-out), visibility 0.25s var(--ease-out);
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox__img {
+  max-width: min(900px, 100%);
+  max-height: 85vh;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  transform: scale(0.96);
+  transition: transform 0.25s var(--ease-out);
+}
+
+.lightbox.is-open .lightbox__img {
+  transform: scale(1);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  transition: background var(--transition);
+}
+
+.lightbox__close:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
 /* ---------- 14. Certificates ---------- */
 .certificates {
   background: var(--color-bg-alt);

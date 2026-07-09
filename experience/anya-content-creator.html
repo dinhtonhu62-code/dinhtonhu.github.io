@@ -128,6 +128,17 @@
           </a>
         </div>
 
+        <h2>Hình ảnh thực tế</h2>
+        <div class="media-gallery">
+          <div class="media-gallery__empty">Ảnh sẽ được cập nhật sớm</div>
+          <!--
+            Khi có ảnh thật, thay dòng trên bằng các khối sau (copy nhiều lần nếu có nhiều ảnh):
+            <button type="button" class="media-gallery__item">
+              <img src="../assets/images/experience/content-creator-2.jpg" alt="Mô tả ảnh" loading="lazy" />
+            </button>
+          -->
+        </div>
+
         <div class="experience-detail__nav">
           <a href="../index.html#experience" class="btn btn--ghost btn--sm">Tất cả kinh nghiệm</a>
           <a href="anya-customer-care.html" class="btn btn--primary btn--sm">
@@ -138,6 +149,14 @@
     </section>
 
   </main>
+
+  <!-- ============ LIGHTBOX (xem ảnh phóng to) ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button type="button" class="lightbox__close" id="lightboxClose" aria-label="Đóng">
+      <svg class="icon" aria-hidden="true"><use href="#icon-x"></use></svg>
+    </button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+  </div>
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">

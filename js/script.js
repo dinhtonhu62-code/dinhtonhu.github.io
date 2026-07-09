@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initBackToTop();
   initContactForm();
   initParallax();
+  initMediaGallery();
   document.getElementById("year").textContent = new Date().getFullYear();
 });
 
@@ -301,5 +302,42 @@ function initParallax() {
     const y = (e.clientY / window.innerHeight - 0.5) * 20;
     blob.style.transform = `translate(${x}px, ${y}px)`;
     avatar.style.transform = `translate(${x * 0.4}px, ${y * 0.4}px)`;
+  });
+}
+
+/* ---------- Thư viện ảnh: bấm vào ảnh để xem phóng to (lightbox) ---------- */
+function initMediaGallery() {
+  const items = document.querySelectorAll(".media-gallery__item");
+  const lightbox = document.getElementById("lightbox");
+  if (!items.length || !lightbox) return;
+
+  const lightboxImg = document.getElementById("lightboxImg");
+  const closeBtn = document.getElementById("lightboxClose");
+
+  function open(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt;
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+  }
+
+  function close() {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+  }
+
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      const img = item.querySelector("img");
+      open(img.src, img.alt);
+    });
+  });
+
+  closeBtn.addEventListener("click", close);
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) close();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
   });
 }
