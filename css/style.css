@@ -1318,6 +1318,23 @@ textarea:focus-visible {
   border-radius: var(--radius);
 }
 
+.media-gallery__caption {
+  display: block;
+  padding: 12px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-secondary);
+  background: #fff;
+  text-align: center;
+}
+
+.case-study-hero__banner-caption {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+}
+
 @media (max-width: 560px) {
   .media-gallery {
     grid-template-columns: repeat(2, 1fr);
