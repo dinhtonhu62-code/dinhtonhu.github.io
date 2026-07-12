@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AI-Assisted Website Development | Đinh Thị Tố Như</title>
+  <meta name="description" content="Case study: quá trình tự thiết kế và xây dựng lại website portfolio cá nhân với sự hỗ trợ của Claude AI — từ lên ý tưởng, viết prompt, chỉnh sửa code đến tối ưu giao diện." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1E9BD7" />
+
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- ============ ICON SPRITE ============ -->
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5,12 12,5 19,12"/></symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12,19 5,12 12,5"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+    <symbol id="icon-external-link" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></symbol>
+    <symbol id="icon-check-circle" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></symbol>
+    <symbol id="icon-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24"><polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/></symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+    <symbol id="icon-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+  </svg>
+
+  <!-- ============ LOADER ============ -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__mark">N.</div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ============ SCROLL PROGRESS BAR ============ -->
+  <div class="scroll-progress"><div class="scroll-progress__bar" id="scrollProgressBar"></div></div>
+
+  <a class="skip-link" href="#main">Bỏ qua tới nội dung chính</a>
+
+  <!-- ============ HEADER / NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="../index.html#home" class="navbar__logo" aria-label="Về trang chủ">Đinh Thị Tố Như<span class="navbar__logo-dot">.</span></a>
+
+      <nav class="navbar__nav" id="navMenu" aria-label="Menu chính">
+        <ul class="navbar__list">
+          <li><a href="../index.html#home" class="navbar__link" data-nav>Trang chủ</a></li>
+          <li><a href="../index.html#projects" class="navbar__link" data-nav>Dự án</a></li>
+          <li><a href="../index.html#contact" class="navbar__link" data-nav>Liên hệ</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="../assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--primary btn--sm">Download CV</a>
+        <button class="navbar__toggle" id="navToggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="navMenu">
+          <svg class="icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ SECTION 1: HERO ============ -->
+    <section class="project-hero">
+      <div class="container">
+        <a href="../index.html#projects" class="btn btn--outline btn--sm project-hero__back">
+          <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+          Quay lại danh sách dự án
+        </a>
+        <p class="section-tag">Case Study</p>
+        <h1 class="section-title" style="margin-bottom: 8px;">AI-Assisted Website Development</h1>
+        <p class="case-study-hero__subtitle">Design &bull; Front-end Development &bull; Prompt Engineering</p>
+
+        <div class="case-study-hero__roles">
+          <span class="tag">UI/UX Design</span>
+          <span class="tag">Front-end Development</span>
+          <span class="tag">Prompt Engineering</span>
+          <span class="tag">Responsive Optimization</span>
+        </div>
+
+        <div class="project-hero__meta">
+          <span class="timeline__duration">6/2026</span>
+        </div>
+
+        <div class="case-study-hero__actions">
+          <a href="https://iunlockvn.com" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+            Live Demo <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+          </a>
+          <a href="https://github.com/dinhtonhu62-code/dinhtonhu.github.io" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+            <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-github"></use></svg> GitHub
+          </a>
+        </div>
+
+        <div class="case-study-hero__banner reveal" data-reveal="fade-up">
+          <div class="placeholder-banner">Ảnh banner sẽ được cập nhật sớm</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 2: PROJECT OVERVIEW ============ -->
+    <section class="case-study-section">
+      <div class="container">
+        <p class="section-tag reveal" data-reveal="fade-up">Tổng quan</p>
+        <h2 class="section-title reveal" data-reveal="fade-up">Project Overview</h2>
+        <p class="case-study-prose reveal" data-reveal="fade-up" data-reveal-delay="1">
+          AI-Assisted Website Development là case-study ghi lại quá trình tôi tự thiết kế và xây dựng lại website
+          portfolio cá nhân này, với Claude AI đóng vai trò trợ lý lập trình giúp tăng tốc độ viết code. Website
+          hướng đến các nhà tuyển dụng và đối tác Marketing muốn tìm hiểu về kinh nghiệm, kỹ năng và các dự án tôi
+          đã thực hiện. Mục tiêu là tạo ra một portfolio hiện đại, tối ưu trải nghiệm người dùng, dễ cập nhật nội
+          dung và thể hiện rõ năng lực làm việc thực tế. Tôi chọn Claude AI vì đây là công cụ hỗ trợ viết code đáng
+          tin cậy, giúp rút ngắn thời gian dựng khung HTML/CSS/JavaScript, để tôi có thể tập trung nhiều hơn vào
+          tư duy thiết kế, nội dung và trải nghiệm người dùng.
+        </p>
+
+        <div class="about__grid" style="margin-top: 40px;">
+          <div class="about-card reveal" data-reveal="fade-up" data-reveal-delay="1">
+            <div class="about-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-briefcase"></use></svg></div>
+            <h3 class="about-card__title">Project Type</h3>
+            <p class="about-card__text">Personal Portfolio Website</p>
+          </div>
+          <div class="about-card reveal" data-reveal="fade-up" data-reveal-delay="2">
+            <div class="about-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg></div>
+            <h3 class="about-card__title">Duration</h3>
+            <p class="about-card__text">6/2026</p>
+          </div>
+          <div class="about-card reveal" data-reveal="fade-up" data-reveal-delay="3">
+            <div class="about-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-target"></use></svg></div>
+            <h3 class="about-card__title">Role</h3>
+            <p class="about-card__text">Designer &amp; Developer</p>
+          </div>
+          <div class="about-card reveal" data-reveal="fade-up" data-reveal-delay="4">
+            <div class="about-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-external-link"></use></svg></div>
+            <h3 class="about-card__title">Platform</h3>
+            <p class="about-card__text">GitHub Pages</p>
+          </div>
+          <div class="about-card reveal" data-reveal="fade-up" data-reveal-delay="5">
+            <div class="about-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg></div>
+            <h3 class="about-card__title">Deployment</h3>
+            <p class="about-card__text">Static Site (HTML/CSS/JS)</p>
+          </div>
+          <div class="about-card reveal" data-reveal="fade-up" data-reveal-delay="1">
+            <div class="about-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-code"></use></svg></div>
+            <h3 class="about-card__title">Tech Stack</h3>
+            <p class="about-card__text">HTML5, CSS3, JavaScript, Claude AI</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 3: MY RESPONSIBILITIES ============ -->
+    <section class="case-study-section case-study-section--alt">
+      <div class="container">
+        <p class="section-tag reveal" data-reveal="fade-up">Vai trò</p>
+        <h2 class="section-title reveal" data-reveal="fade-up">My Responsibilities</h2>
+
+        <div class="checklist-grid">
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="1"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Phân tích yêu cầu dự án</span></div>
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="2"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Thiết kế cấu trúc website</span></div>
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="3"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Thiết kế UI/UX</span></div>
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="4"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Viết Prompt cho Claude AI</span></div>
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="5"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Chỉnh sửa HTML</span></div>
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="1"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Chỉnh sửa CSS</span></div>
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="2"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Chỉnh sửa JavaScript</span></div>
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="3"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Tối ưu Responsive</span></div>
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="4"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Tối ưu SEO</span></div>
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="5"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Kiểm thử và hoàn thiện giao diện</span></div>
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="1"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Deploy lên GitHub Pages</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 4: DEVELOPMENT PROCESS ============ -->
+    <section class="case-study-section">
+      <div class="container">
+        <p class="section-tag reveal" data-reveal="fade-up">Quy trình</p>
+        <h2 class="section-title reveal" data-reveal="fade-up">Development Process</h2>
+
+        <ol class="process-timeline">
+          <li class="process-step reveal" data-reveal="fade-up">
+            <div class="process-step__dot" aria-hidden="true"></div>
+            <p class="process-step__label">Research</p>
+          </li>
+          <li class="process-step reveal" data-reveal="fade-up">
+            <div class="process-step__dot" aria-hidden="true"></div>
+            <p class="process-step__label">Planning</p>
+          </li>
+          <li class="process-step reveal" data-reveal="fade-up">
+            <div class="process-step__dot" aria-hidden="true"></div>
+            <p class="process-step__label">Wireframe</p>
+          </li>
+          <li class="process-step reveal" data-reveal="fade-up">
+            <div class="process-step__dot" aria-hidden="true"></div>
+            <p class="process-step__label">Prompt Engineering</p>
+          </li>
+          <li class="process-step reveal" data-reveal="fade-up">
+            <div class="process-step__dot" aria-hidden="true"></div>
+            <p class="process-step__label">Claude AI Generate Code</p>
+          </li>
+          <li class="process-step reveal" data-reveal="fade-up">
+            <div class="process-step__dot" aria-hidden="true"></div>
+            <p class="process-step__label">Manual Code Review</p>
+          </li>
+          <li class="process-step reveal" data-reveal="fade-up">
+            <div class="process-step__dot" aria-hidden="true"></div>
+            <p class="process-step__label">UI Refinement</p>
+          </li>
+          <li class="process-step reveal" data-reveal="fade-up">
+            <div class="process-step__dot" aria-hidden="true"></div>
+            <p class="process-step__label">Responsive Optimization</p>
+          </li>
+          <li class="process-step reveal" data-reveal="fade-up">
+            <div class="process-step__dot" aria-hidden="true"></div>
+            <p class="process-step__label">Testing</p>
+          </li>
+          <li class="process-step reveal" data-reveal="fade-up">
+            <div class="process-step__dot" aria-hidden="true"></div>
+            <p class="process-step__label">Deployment</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 5: PROMPT ENGINEERING ============ -->
+    <section class="case-study-section case-study-section--alt">
+      <div class="container">
+        <p class="section-tag reveal" data-reveal="fade-up">Điểm nổi bật</p>
+        <h2 class="section-title reveal" data-reveal="fade-up">Prompt Engineering</h2>
+
+        <div class="prompt-layout">
+          <div class="prompt-list reveal" data-reveal="fade-right">
+            <div class="prompt-list__item">
+              <strong>Prompt Objective</strong>
+              <span>Mô tả rõ mục tiêu từng phần website (Hero, Skills, Experience...) để Claude AI hiểu đúng ngữ cảnh trước khi sinh code.</span>
+            </div>
+            <div class="prompt-list__item">
+              <strong>Prompt Iterations</strong>
+              <span>Mỗi phần được viết prompt và chỉnh sửa qua nhiều vòng, thay vì yêu cầu toàn bộ website trong một lần.</span>
+            </div>
+            <div class="prompt-list__item">
+              <strong>Prompt Optimization</strong>
+              <span>Bổ sung ràng buộc cụ thể: design token màu sắc, font chữ, class CSS có sẵn để code sinh ra khớp với hệ thống thiết kế.</span>
+            </div>
+            <div class="prompt-list__item">
+              <strong>AI Generated Components</strong>
+              <span>Claude AI hỗ trợ dựng khung HTML, gợi ý cấu trúc CSS và logic JavaScript cơ bản cho từng component.</span>
+            </div>
+            <div class="prompt-list__item">
+              <strong>Manual Improvements</strong>
+              <span>Tôi trực tiếp rà soát, chỉnh sửa code, tối ưu khoảng cách, hiệu ứng và responsive cho từng thiết bị.</span>
+            </div>
+          </div>
+
+          <div class="prompt-code reveal" data-reveal="fade-left">
+            <button type="button" class="prompt-code__copy" id="promptCopyBtn" data-copy-target="promptSample" data-label-default="Copy">
+              <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-copy"></use></svg> Copy
+            </button>
+            <pre><code id="promptSample">Tôi đang xây dựng website portfolio cá nhân bằng HTML/CSS/JS
+thuần (không dùng framework). Hãy giúp tôi tạo phần Hero section
+gồm: tên, chức danh, đoạn giới thiệu ngắn, nút "Xem dự án" và
+"Download CV".
+
+Yêu cầu:
+- Dùng đúng design token màu sắc (--color-primary, --color-secondary)
+  và font Inter đã khai báo trong style.css
+- Giữ nguyên bố cục responsive hiện có
+- Thêm hiệu ứng fade-up khi cuộn tới bằng class .reveal có sẵn
+- Không tạo thêm màu sắc hoặc font mới ngoài hệ thống hiện tại</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 6: WEBSITE FEATURES ============ -->
+    <section class="case-study-section">
+      <div class="container">
+        <p class="section-tag reveal" data-reveal="fade-up">Tính năng</p>
+        <h2 class="section-title reveal" data-reveal="fade-up">Website Features</h2>
+
+        <div class="feature-grid">
+          <div class="feature-chip reveal" data-reveal="fade-up" data-reveal-delay="1"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-check-circle"></use></svg>Responsive</div>
+          <div class="feature-chip reveal" data-reveal="fade-up" data-reveal-delay="2"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-check-circle"></use></svg>Modern UI</div>
+          <div class="feature-chip reveal" data-reveal="fade-up" data-reveal-delay="3"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-check-circle"></use></svg>Smooth Scroll</div>
+          <div class="feature-chip reveal" data-reveal="fade-up" data-reveal-delay="4"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-check-circle"></use></svg>Scroll Animation</div>
+          <div class="feature-chip reveal" data-reveal="fade-up" data-reveal-delay="1"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-check-circle"></use></svg>Scroll Progress Bar</div>
+          <div class="feature-chip reveal" data-reveal="fade-up" data-reveal-delay="2"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-check-circle"></use></svg>SEO Friendly</div>
+          <div class="feature-chip reveal" data-reveal="fade-up" data-reveal-delay="3"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-check-circle"></use></svg>Fast Loading</div>
+          <div class="feature-chip reveal" data-reveal="fade-up" data-reveal-delay="4"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-check-circle"></use></svg>Accessible</div>
+          <div class="feature-chip reveal" data-reveal="fade-up" data-reveal-delay="1"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-check-circle"></use></svg>Reusable Components</div>
+          <div class="feature-chip reveal" data-reveal="fade-up" data-reveal-delay="2"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-check-circle"></use></svg>Portfolio Case Study</div>
+          <div class="feature-chip reveal" data-reveal="fade-up" data-reveal-delay="3"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-check-circle"></use></svg>Project Detail Pages</div>
+          <div class="feature-chip reveal" data-reveal="fade-up" data-reveal-delay="4"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-check-circle"></use></svg>Contact Form</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 7: TECHNOLOGY STACK ============ -->
+    <section class="case-study-section case-study-section--alt">
+      <div class="container">
+        <p class="section-tag reveal" data-reveal="fade-up">Công nghệ</p>
+        <h2 class="section-title reveal" data-reveal="fade-up">Technology Stack</h2>
+
+        <div class="tech-grid">
+          <div class="tech-card reveal" data-reveal="fade-up" data-reveal-delay="1"><span class="tech-card__badge">AI</span><span class="tech-card__label">Claude AI</span></div>
+          <div class="tech-card reveal" data-reveal="fade-up" data-reveal-delay="2"><span class="tech-card__badge">H5</span><span class="tech-card__label">HTML5</span></div>
+          <div class="tech-card reveal" data-reveal="fade-up" data-reveal-delay="3"><span class="tech-card__badge">C3</span><span class="tech-card__label">CSS3</span></div>
+          <div class="tech-card reveal" data-reveal="fade-up" data-reveal-delay="4"><span class="tech-card__badge">JS</span><span class="tech-card__label">JavaScript</span></div>
+          <div class="tech-card reveal" data-reveal="fade-up" data-reveal-delay="5"><span class="tech-card__badge">GF</span><span class="tech-card__label">Google Fonts</span></div>
+          <div class="tech-card reveal" data-reveal="fade-up" data-reveal-delay="1"><span class="tech-card__badge">GD</span><span class="tech-card__label">GitHub Desktop</span></div>
+          <div class="tech-card reveal" data-reveal="fade-up" data-reveal-delay="2"><span class="tech-card__badge">GP</span><span class="tech-card__label">GitHub Pages</span></div>
+          <div class="tech-card reveal" data-reveal="fade-up" data-reveal-delay="3"><span class="tech-card__badge">SVG</span><span class="tech-card__label">Custom SVG Icons</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 8: CHALLENGES ============ -->
+    <section class="case-study-section">
+      <div class="container">
+        <p class="section-tag reveal" data-reveal="fade-up">Khó khăn</p>
+        <h2 class="section-title reveal" data-reveal="fade-up">Challenges</h2>
+
+        <div class="issue-grid">
+          <div class="issue-card reveal" data-reveal="fade-up" data-reveal-delay="1"><svg class="icon" aria-hidden="true"><use href="#icon-target"></use></svg><p>Code AI sinh ra ban đầu chưa tối ưu, cần chỉnh sửa lại cấu trúc.</p></div>
+          <div class="issue-card reveal" data-reveal="fade-up" data-reveal-delay="2"><svg class="icon" aria-hidden="true"><use href="#icon-target"></use></svg><p>Responsive trên một số thiết bị chưa hoàn chỉnh ngay từ đầu.</p></div>
+          <div class="issue-card reveal" data-reveal="fade-up" data-reveal-delay="3"><svg class="icon" aria-hidden="true"><use href="#icon-target"></use></svg><p>Hiệu ứng animation cần chỉnh sửa nhiều lần để mượt và tự nhiên hơn.</p></div>
+          <div class="issue-card reveal" data-reveal="fade-up" data-reveal-delay="4"><svg class="icon" aria-hidden="true"><use href="#icon-target"></use></svg><p>Khoảng trắng giữa các phần chưa hợp lý, bố cục còn chật.</p></div>
+          <div class="issue-card reveal" data-reveal="fade-up" data-reveal-delay="5"><svg class="icon" aria-hidden="true"><use href="#icon-target"></use></svg><p>Cấu trúc component (card, button, tag...) cần tối ưu để tái sử dụng.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 9: SOLUTIONS ============ -->
+    <section class="case-study-section case-study-section--alt">
+      <div class="container">
+        <p class="section-tag reveal" data-reveal="fade-up">Giải pháp</p>
+        <h2 class="section-title reveal" data-reveal="fade-up">Solutions</h2>
+
+        <div class="issue-grid">
+          <div class="issue-card reveal" data-reveal="fade-up" data-reveal-delay="1"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><p>Tối ưu prompt nhiều lần, bổ sung ràng buộc kỹ thuật cụ thể hơn.</p></div>
+          <div class="issue-card reveal" data-reveal="fade-up" data-reveal-delay="2"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><p>Refactor lại HTML cho gọn gàng, đúng ngữ nghĩa hơn.</p></div>
+          <div class="issue-card reveal" data-reveal="fade-up" data-reveal-delay="3"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><p>Refactor CSS, gộp các class lặp lại thành hệ thống dùng chung.</p></div>
+          <div class="issue-card reveal" data-reveal="fade-up" data-reveal-delay="4"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><p>Tối ưu lại JavaScript cho các hiệu ứng tương tác và lightbox.</p></div>
+          <div class="issue-card reveal" data-reveal="fade-up" data-reveal-delay="5"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><p>Chỉnh responsive thủ công, kiểm tra trực tiếp trên nhiều kích thước.</p></div>
+          <div class="issue-card reveal" data-reveal="fade-up" data-reveal-delay="1"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><p>Cải thiện giao diện theo nguyên tắc UX: rõ ràng, nhất quán, dễ thao tác.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 10: WEBSITE SHOWCASE ============ -->
+    <section class="case-study-section">
+      <div class="container">
+        <p class="section-tag reveal" data-reveal="fade-up">Hình ảnh</p>
+        <h2 class="section-title" style="margin-bottom: 16px;">Website Showcase</h2>
+        <div class="case-study-hero__roles" style="margin-bottom: 24px;">
+          <span class="tag">Desktop</span>
+          <span class="tag">Tablet</span>
+          <span class="tag">Mobile</span>
+        </div>
+
+        <div class="media-gallery">
+          <div class="media-gallery__empty">Homepage — Ảnh sẽ được cập nhật sớm</div>
+          <div class="media-gallery__empty">About — Ảnh sẽ được cập nhật sớm</div>
+          <div class="media-gallery__empty">Projects — Ảnh sẽ được cập nhật sớm</div>
+          <div class="media-gallery__empty">SEO Case Study — Ảnh sẽ được cập nhật sớm</div>
+          <div class="media-gallery__empty">WordPress Case Study — Ảnh sẽ được cập nhật sớm</div>
+          <div class="media-gallery__empty">Contact — Ảnh sẽ được cập nhật sớm</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 11: PERFORMANCE ============ -->
+    <section class="case-study-section case-study-section--alt">
+      <div class="container">
+        <p class="section-tag reveal" data-reveal="fade-up">Đo lường</p>
+        <h2 class="section-title reveal" data-reveal="fade-up">Performance</h2>
+
+        <div class="perf-grid">
+          <div class="perf-card reveal" data-reveal="fade-up" data-reveal-delay="1"><p class="perf-card__score">—</p><p class="perf-card__label">Performance</p></div>
+          <div class="perf-card reveal" data-reveal="fade-up" data-reveal-delay="2"><p class="perf-card__score">—</p><p class="perf-card__label">Accessibility</p></div>
+          <div class="perf-card reveal" data-reveal="fade-up" data-reveal-delay="3"><p class="perf-card__score">—</p><p class="perf-card__label">Best Practices</p></div>
+          <div class="perf-card reveal" data-reveal="fade-up" data-reveal-delay="4"><p class="perf-card__score">—</p><p class="perf-card__label">SEO</p></div>
+          <div class="perf-card reveal" data-reveal="fade-up" data-reveal-delay="5"><p class="perf-card__score">—</p><p class="perf-card__label">Responsive Score</p></div>
+          <div class="perf-card reveal" data-reveal="fade-up" data-reveal-delay="1"><p class="perf-card__score">—</p><p class="perf-card__label">Loading Speed</p></div>
+        </div>
+        <p class="case-study-prose" style="margin-top: 20px; font-size: 14px;">Số liệu sẽ được cập nhật sau khi chạy audit Lighthouse thực tế trên bản deploy chính thức.</p>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 12: LESSONS LEARNED ============ -->
+    <section class="case-study-section">
+      <div class="container">
+        <p class="section-tag reveal" data-reveal="fade-up">Bài học</p>
+        <h2 class="section-title reveal" data-reveal="fade-up">Lessons Learned</h2>
+
+        <ul class="case-study-list reveal" data-reveal="fade-up">
+          <li>Prompt Engineering hiệu quả cần mô tả rõ bối cảnh, ràng buộc kỹ thuật và design token sẵn có, thay vì yêu cầu chung chung.</li>
+          <li>Chia nhỏ yêu cầu theo từng phần (Hero, Skills, Experience...) giúp kiểm soát chất lượng code tốt hơn so với yêu cầu toàn bộ website cùng lúc.</li>
+          <li>Responsive design cần được kiểm tra thủ công trên nhiều kích thước màn hình, AI không thể tự đảm bảo hoàn toàn.</li>
+          <li>Xây dựng hệ thống component tái sử dụng (button, card, tag) giúp mở rộng thêm trang mới nhanh và đồng nhất hơn.</li>
+          <li>Luôn đọc và hiểu code trước khi chấp nhận, để có thể tự chỉnh sửa khi cần thay vì phụ thuộc hoàn toàn vào AI.</li>
+          <li>Kết hợp AI với lập trình thủ công giúp rút ngắn thời gian phát triển đáng kể, nhưng tư duy thiết kế và kiểm thử vẫn do chính mình đảm nhận.</li>
+          <li>Tối ưu giao diện là quá trình lặp lại nhiều lần, không có bản nào hoàn hảo ngay từ đầu.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 13: KEY ACHIEVEMENTS ============ -->
+    <section class="case-study-section case-study-section--alt">
+      <div class="container">
+        <p class="section-tag reveal" data-reveal="fade-up">Thành quả</p>
+        <h2 class="section-title reveal" data-reveal="fade-up">Key Achievements</h2>
+
+        <div class="checklist-grid">
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="1"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Thiết kế hoàn chỉnh Portfolio Website</span></div>
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="2"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Tích hợp nhiều trang Case Study</span></div>
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="3"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Responsive trên Desktop, Tablet và Mobile</span></div>
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="4"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Áp dụng Prompt Engineering để tăng tốc phát triển</span></div>
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="5"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Tối ưu SEO cơ bản</span></div>
+          <div class="checklist-item reveal" data-reveal="fade-up" data-reveal-delay="1"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Deploy thành công trên GitHub Pages</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 14: REFLECTION ============ -->
+    <section class="case-study-section">
+      <div class="container">
+        <p class="section-tag reveal" data-reveal="fade-up">Suy ngẫm</p>
+        <h2 class="section-title reveal" data-reveal="fade-up">Reflection</h2>
+
+        <blockquote class="quote-block reveal" data-reveal="fade-up">
+          Tôi sử dụng Claude AI như một công cụ hỗ trợ tăng năng suất trong quá trình xây dựng lại website portfolio
+          này, nhưng toàn bộ quá trình phân tích yêu cầu, thiết kế giao diện, viết prompt, kiểm tra chất lượng, chỉnh
+          sửa mã nguồn và tối ưu trải nghiệm người dùng đều do tôi thực hiện. AI giúp tôi rút ngắn thời gian dựng
+          khung HTML/CSS/JavaScript ban đầu, nhưng chính tôi mới là người quyết định cấu trúc thông tin, phong cách
+          thiết kế, màu sắc, và cách các thành phần tương tác với nhau. Mỗi đoạn code do AI tạo ra đều được tôi đọc
+          lại, kiểm tra và chỉnh sửa để đảm bảo đúng với hệ thống thiết kế sẵn có và trải nghiệm mong muốn. Dự án
+          này giúp tôi hiểu rõ hơn cách khai thác AI như một cộng sự kỹ thuật hiệu quả, đồng thời củng cố tư duy
+          thiết kế, kỹ năng front-end và quy trình làm việc chuyên nghiệp của bản thân.
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 15: NEXT PROJECT ============ -->
+    <section class="case-study-section case-study-section--alt">
+      <div class="container">
+        <div class="project-detail__nav" style="margin-top: 0; padding-top: 0; border-top: none;">
+          <a href="../index.html#projects" class="btn btn--ghost btn--sm">Tất cả dự án</a>
+          <a href="eyedia.html" class="btn btn--primary btn--sm">
+            Dự án tiếp theo <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ LIGHTBOX (xem ảnh phóng to) ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button type="button" class="lightbox__close" id="lightboxClose" aria-label="Đóng">
+      <svg class="icon" aria-hidden="true"><use href="#icon-x"></use></svg>
+    </button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="year"></span> Đinh Thị Tố Như. All rights reserved.</p>
+      <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
+      </button>
+    </div>
+  </footer>
+
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

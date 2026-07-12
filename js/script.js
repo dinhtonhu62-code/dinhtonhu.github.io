@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
   initParallax();
   initMediaGallery();
+  initPromptCopy();
   document.getElementById("year").textContent = new Date().getFullYear();
 });
 
@@ -339,5 +340,30 @@ function initMediaGallery() {
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") close();
+  });
+}
+
+/* ---------- Nút Copy cho khối Prompt (trang case-study) ---------- */
+function initPromptCopy() {
+  const buttons = document.querySelectorAll(".prompt-code__copy");
+  if (!buttons.length) return;
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const codeEl = document.getElementById(btn.dataset.copyTarget);
+      if (!codeEl) return;
+      try {
+        await navigator.clipboard.writeText(codeEl.textContent.trim());
+      } catch (err) {
+        return;
+      }
+      const originalLabel = btn.dataset.labelDefault || btn.textContent.trim();
+      btn.classList.add("is-copied");
+      btn.textContent = "Đã copy!";
+      setTimeout(() => {
+        btn.classList.remove("is-copied");
+        btn.textContent = originalLabel;
+      }, 1800);
+    });
   });
 }
