@@ -1465,18 +1465,25 @@ textarea:focus-visible {
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: 700;
-  font-size: clamp(1.9rem, 4.2vw, 2.85rem);
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
   letter-spacing: -0.01em;
   color: #fff;
-  margin: 6px 0 18px;
+  margin: 6px 0 16px;
 }
 
 .footer__cta-lead {
   max-width: 600px;
   margin: 0 auto 32px;
   color: rgba(255, 255, 255, 0.65);
-  font-size: 15.5px;
+  font-size: 15px;
   line-height: 1.7;
+}
+
+@media (min-width: 900px) {
+  .footer__cta-lead {
+    max-width: none;
+    white-space: nowrap;
+  }
 }
 
 .footer__info-row {
