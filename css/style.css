@@ -594,7 +594,16 @@ textarea:focus-visible {
 
 /* ---------- 10. About ---------- */
 .about {
+  position: relative;
+  overflow: hidden;
   background: var(--color-bg-alt);
+}
+
+.about > .container,
+.experience > .container,
+.certificates > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .about__desc {
@@ -711,6 +720,12 @@ textarea:focus-visible {
 }
 
 /* ---------- 12. Experience timeline ---------- */
+.experience {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+}
+
 .timeline {
   position: relative;
   max-width: 780px;
@@ -1394,6 +1409,8 @@ textarea:focus-visible {
 
 /* ---------- 14. Certificates ---------- */
 .certificates {
+  position: relative;
+  overflow: hidden;
   background: var(--color-bg-alt);
 }
 
@@ -2539,5 +2556,46 @@ a.footer__info-item:hover {
 
   .exp-card__head {
     flex-direction: column;
+  }
+}
+
+/* ==========================================================================
+   21. AMBIENT MOTION + MICRO-INTERACTIONS
+   ========================================================================== */
+
+.section-blob {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+  animation: blobFloat 9s ease-in-out infinite;
+}
+
+.section-blob--primary {
+  background: var(--color-primary);
+}
+
+.section-blob--accent {
+  background: var(--color-accent);
+  animation-delay: -4s;
+}
+
+.tag {
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.tag:hover {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 560px) {
+  .section-blob {
+    width: 200px;
+    height: 200px;
   }
 }
