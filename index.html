@@ -463,60 +463,33 @@
     </section>
 
     <!-- ============ SECTION 7: CONTACT ============ -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact contact--cta">
       <div class="container">
         <p class="section-tag reveal" data-reveal="fade-up">Liên hệ</p>
-        <h2 class="section-title reveal" data-reveal="fade-up">Contact</h2>
+        <h2 class="contact__cta-title reveal" data-reveal="fade-up">Let's Create Something Together</h2>
         <p class="contact__lead reveal" data-reveal="fade-up">
-          Hãy để lại lời nhắn, tôi sẽ phản hồi sớm nhất có thể.
+          Dù là Content Marketing, SEO hay ứng dụng AI vào công việc, tôi luôn sẵn sàng hợp tác trong những dự án ý nghĩa.
         </p>
 
-        <div class="contact__grid">
-          <form class="contact-form reveal" data-reveal="fade-right" id="contactForm" novalidate>
-            <div class="form-group">
-              <label for="name">Họ và tên</label>
-              <input type="text" id="name" name="name" placeholder="Nguyễn Văn B" required autocomplete="name" />
-              <span class="form-error" id="nameError"></span>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="ban@email.com" required autocomplete="email" />
-              <span class="form-error" id="emailError"></span>
-            </div>
-            <div class="form-group">
-              <label for="message">Lời nhắn</label>
-              <textarea id="message" name="message" rows="5" placeholder="Nội dung bạn muốn trao đổi..." required></textarea>
-              <span class="form-error" id="messageError"></span>
-            </div>
-            <button type="submit" class="btn btn--primary btn--full">
-              Send Message <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-send"></use></svg>
-            </button>
-            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-          </form>
+        <div class="contact__info-row reveal" data-reveal="fade-up">
+          <a href="mailto:dinhtonhu62@gmail.com" class="contact__info-item">
+            <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-mail"></use></svg> dinhtonhu62@gmail.com
+          </a>
+          <a href="tel:+84398836731" class="contact__info-item">
+            <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-phone"></use></svg> +84 398 836 731
+          </a>
+          <span class="contact__info-item">
+            <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-map-pin"></use></svg> Quận Gò Vấp, Tp.HCM
+          </span>
+        </div>
 
-          <div class="contact-info reveal" data-reveal="fade-left">
-            <a href="mailto:dinhtonhu62@gmail.com" class="contact-info__item">
-              <span class="contact-info__icon"><svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg></span>
-              <span>
-                <strong>Email</strong>
-                <span>dinhtonhu62@gmail.com</span>
-              </span>
-            </a>
-            <a href="tel:+84398836731" class="contact-info__item">
-              <span class="contact-info__icon"><svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg></span>
-              <span>
-                <strong>Điện thoại</strong>
-                <span>+84 398 836 731</span>
-              </span>
-            </a>
-            <span class="contact-info__item">
-              <span class="contact-info__icon"><svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg></span>
-              <span>
-                <strong>Địa chỉ</strong>
-                <span>Quận Gò Vấp, Tp.HCM</span>
-              </span>
-            </span>
-          </div>
+        <div class="contact__cta-actions reveal" data-reveal="fade-up">
+          <a href="mailto:dinhtonhu62@gmail.com" class="btn btn--primary">
+            <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-mail"></use></svg> Send Email
+          </a>
+          <a href="assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--outline">
+            <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-download"></use></svg> Download CV
+          </a>
         </div>
       </div>
     </section>
@@ -525,11 +498,17 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <p>&copy; <span id="year"></span> Đinh Thị Tố Như. All rights reserved.</p>
-      <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
-        <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
-      </button>
+    <div class="container">
+      <p class="footer__status">
+        <span class="footer__status-dot" aria-hidden="true"></span>
+        Currently open to AI, Creative Technology, and Digital Marketing opportunities.
+      </p>
+      <div class="footer__inner">
+        <p>&copy; <span id="year"></span> Đinh Thị Tố Như. All rights reserved.</p>
+        <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
+          <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
+        </button>
+      </div>
     </div>
   </footer>
 

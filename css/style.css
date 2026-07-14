@@ -1449,6 +1449,82 @@ textarea:focus-visible {
   font-size: 16px;
 }
 
+/* ---- Contact CTA (redesign) ---- */
+.contact--cta .container {
+  text-align: center;
+}
+
+.contact--cta .section-tag {
+  display: block;
+}
+
+.contact__cta-title {
+  font-size: clamp(1.75rem, 3.6vw, 2.5rem);
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  color: var(--color-secondary);
+  margin-bottom: 16px;
+}
+
+.contact--cta .contact__lead {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 36px;
+}
+
+.contact__info-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 36px;
+}
+
+.contact__info-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+}
+
+a.contact__info-item:hover {
+  color: var(--color-primary);
+}
+
+.contact__info-item .icon {
+  color: var(--color-primary);
+}
+
+.contact__cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+@media (max-width: 560px) {
+  .contact__info-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact__cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact__cta-actions .btn {
+    width: 100%;
+  }
+}
+
 .contact__grid {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
@@ -1581,6 +1657,40 @@ textarea:focus-visible {
   align-items: center;
   justify-content: space-between;
   font-size: 14px;
+}
+
+.footer__status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+  flex-shrink: 0;
+  animation: footerStatusPulse 2s ease-in-out infinite;
+}
+
+@keyframes footerStatusPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
 }
 
 /* ---------- 17. Back to top ---------- */
