@@ -1449,59 +1449,64 @@ textarea:focus-visible {
   font-size: 16px;
 }
 
-/* ---- Contact CTA (redesign) ---- */
-.contact--cta .container {
+/* ---- Footer CTA (Contact gộp vào Footer) ---- */
+.footer__cta {
   text-align: center;
+  padding-bottom: 40px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.contact--cta .section-tag {
+.footer .section-tag {
   display: block;
 }
 
-.contact__cta-title {
-  font-size: clamp(1.75rem, 3.6vw, 2.5rem);
-  font-weight: 800;
+.footer__cta-title {
+  font-family: "Playfair Display", serif;
   font-style: italic;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4.2vw, 2.85rem);
   letter-spacing: -0.01em;
-  color: var(--color-secondary);
-  margin-bottom: 16px;
+  color: #fff;
+  margin: 6px 0 18px;
 }
 
-.contact--cta .contact__lead {
-  max-width: 620px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 36px;
+.footer__cta-lead {
+  max-width: 600px;
+  margin: 0 auto 32px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 15.5px;
+  line-height: 1.7;
 }
 
-.contact__info-row {
+.footer__info-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 28px;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 
-.contact__info-item {
+.footer__info-item {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 14.5px;
+  font-size: 14px;
   font-weight: 500;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.75);
   transition: color var(--transition);
 }
 
-a.contact__info-item:hover {
-  color: var(--color-primary);
+a.footer__info-item:hover {
+  color: #fff;
 }
 
-.contact__info-item .icon {
-  color: var(--color-primary);
+.footer__info-item .icon {
+  color: var(--color-accent);
 }
 
-.contact__cta-actions {
+.footer__cta-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1509,18 +1514,29 @@ a.contact__info-item:hover {
   gap: 16px;
 }
 
+.footer .btn--outline {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer .btn--outline:hover {
+  border-color: #fff;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
 @media (max-width: 560px) {
-  .contact__info-row {
+  .footer__info-row {
     flex-direction: column;
     gap: 16px;
   }
 
-  .contact__cta-actions {
+  .footer__cta-actions {
     flex-direction: column;
     width: 100%;
   }
 
-  .contact__cta-actions .btn {
+  .footer__cta-actions .btn {
     width: 100%;
   }
 }
