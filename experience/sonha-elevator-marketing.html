@@ -30,6 +30,7 @@
     <symbol id="icon-external-link" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></symbol>
     <symbol id="icon-check-circle" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></symbol>
     <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></symbol>
   </svg>
 
   <!-- ============ LOADER ============ -->
@@ -164,48 +165,89 @@
             </div>
           </div>
 
-          <!-- 03. SEO CASE STUDY -->
+          <!-- 03. SEO CASE STUDY (carousel nhiều từ khoá) -->
           <div class="viz-group">
             <span class="viz-group__eyebrow">03. SEO Case Study</span>
-            <h3 class="viz-group__title">Keyword Growth — "thang máy tải hàng"</h3>
+            <h3 class="viz-group__title">Keyword Growth</h3>
 
-            <div class="viz-compare">
-              <div class="viz-compare__card viz-compare__card--before">
-                <span class="viz-compare__label">Before</span>
-                <div class="viz-compare__stat"><span>Organic Clicks</span><strong>2</strong></div>
-                <div class="viz-compare__stat"><span>Impressions</span><strong>72</strong></div>
-                <div class="viz-compare__stat"><span>Average Position</span><strong>7.5</strong></div>
+            <div class="viz-carousel" id="keywordCarousel">
+
+              <!-- Slide 1: thang máy tải hàng (đã có số liệu thật) -->
+              <div class="viz-carousel__slide is-active">
+                <p class="viz-carousel__keyword">Keyword Growth — "thang máy tải hàng"</p>
+                <div class="viz-compare">
+                  <div class="viz-compare__card viz-compare__card--before">
+                    <span class="viz-compare__label">Before</span>
+                    <div class="viz-compare__stat"><span>Organic Clicks</span><strong>2</strong></div>
+                    <div class="viz-compare__stat"><span>Impressions</span><strong>72</strong></div>
+                    <div class="viz-compare__stat"><span>Average Position</span><strong>7.5</strong></div>
+                  </div>
+                  <div class="viz-compare__card viz-compare__card--after">
+                    <span class="viz-compare__label">After</span>
+                    <div class="viz-compare__stat"><span>Organic Clicks</span><strong>9</strong></div>
+                    <div class="viz-compare__stat"><span>Impressions</span><strong>125</strong></div>
+                    <div class="viz-compare__stat"><span>Average Position</span><strong>6.5</strong></div>
+                  </div>
+                </div>
+                <div class="viz-bars" aria-hidden="true">
+                  <div class="viz-bar">
+                    <div class="viz-bar__fill" style="height: 22%;"></div>
+                    <span class="viz-bar__value">2</span>
+                    <span class="viz-bar__label">Before</span>
+                  </div>
+                  <div class="viz-bar viz-bar--after">
+                    <div class="viz-bar__fill" style="height: 100%;"></div>
+                    <span class="viz-bar__value">9</span>
+                    <span class="viz-bar__label">After</span>
+                  </div>
+                </div>
+                <div class="viz-highlight">
+                  <p class="viz-highlight__value">+350%</p>
+                  <p class="viz-highlight__label">Organic Clicks</p>
+                </div>
+                <p class="viz-group__desc" style="max-width: none;">
+                  Optimized SEO content and website pages around elevator-related search intent and monitored
+                  performance through Google Search Console.
+                </p>
               </div>
-              <div class="viz-compare__card viz-compare__card--after">
-                <span class="viz-compare__label">After</span>
-                <div class="viz-compare__stat"><span>Organic Clicks</span><strong>9</strong></div>
-                <div class="viz-compare__stat"><span>Impressions</span><strong>125</strong></div>
-                <div class="viz-compare__stat"><span>Average Position</span><strong>6.5</strong></div>
+
+              <!-- Slide 2-5: chờ số liệu thật, tạm để "Đang cập nhật" -->
+              <div class="viz-carousel__slide">
+                <p class="viz-carousel__keyword">Keyword Growth — "thang máy gia đình"</p>
+                <div class="viz-carousel__pending">Số liệu Before/After đang được cập nhật</div>
+              </div>
+
+              <div class="viz-carousel__slide">
+                <p class="viz-carousel__keyword">Keyword Growth — "sửa chữa thang máy"</p>
+                <div class="viz-carousel__pending">Số liệu Before/After đang được cập nhật</div>
+              </div>
+
+              <div class="viz-carousel__slide">
+                <p class="viz-carousel__keyword">Keyword Growth — "thang máy tải khách"</p>
+                <div class="viz-carousel__pending">Số liệu Before/After đang được cập nhật</div>
+              </div>
+
+              <div class="viz-carousel__slide">
+                <p class="viz-carousel__keyword">Keyword Growth — "thang máy người khuyết tật"</p>
+                <div class="viz-carousel__pending">Số liệu Before/After đang được cập nhật</div>
+              </div>
+
+              <div class="viz-carousel__controls">
+                <button type="button" class="viz-carousel__arrow viz-carousel__arrow--prev" aria-label="Từ khoá trước">
+                  <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+                </button>
+                <div class="viz-carousel__dots">
+                  <button type="button" class="viz-carousel__dot is-active" aria-label="Từ khoá 1"></button>
+                  <button type="button" class="viz-carousel__dot" aria-label="Từ khoá 2"></button>
+                  <button type="button" class="viz-carousel__dot" aria-label="Từ khoá 3"></button>
+                  <button type="button" class="viz-carousel__dot" aria-label="Từ khoá 4"></button>
+                  <button type="button" class="viz-carousel__dot" aria-label="Từ khoá 5"></button>
+                </div>
+                <button type="button" class="viz-carousel__arrow viz-carousel__arrow--next" aria-label="Từ khoá tiếp theo">
+                  <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+                </button>
               </div>
             </div>
-
-            <div class="viz-bars" aria-hidden="true">
-              <div class="viz-bar">
-                <div class="viz-bar__fill" style="height: 22%;"></div>
-                <span class="viz-bar__value">2</span>
-                <span class="viz-bar__label">Before</span>
-              </div>
-              <div class="viz-bar viz-bar--after">
-                <div class="viz-bar__fill" style="height: 100%;"></div>
-                <span class="viz-bar__value">9</span>
-                <span class="viz-bar__label">After</span>
-              </div>
-            </div>
-
-            <div class="viz-highlight">
-              <p class="viz-highlight__value">+350%</p>
-              <p class="viz-highlight__label">Organic Clicks</p>
-            </div>
-
-            <p class="viz-group__desc" style="max-width: none;">
-              Optimized SEO content and website pages around elevator-related search intent and monitored
-              performance through Google Search Console.
-            </p>
           </div>
 
           <!-- 04. SEO OPPORTUNITY -->

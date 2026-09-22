@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initParallax();
   initMediaGallery();
   initPromptCopy();
+  initKeywordCarousel();
   document.getElementById("year").textContent = new Date().getFullYear();
 });
 
@@ -365,5 +366,33 @@ function initPromptCopy() {
         btn.textContent = originalLabel;
       }, 1800);
     });
+  });
+}
+
+/* ---------- Carousel từ khoá (SEO Case Study) ---------- */
+function initKeywordCarousel() {
+  const carousels = document.querySelectorAll(".viz-carousel");
+  if (!carousels.length) return;
+
+  carousels.forEach((carousel) => {
+    const slides = carousel.querySelectorAll(".viz-carousel__slide");
+    const dots = carousel.querySelectorAll(".viz-carousel__dot");
+    const prevBtn = carousel.querySelector(".viz-carousel__arrow--prev");
+    const nextBtn = carousel.querySelector(".viz-carousel__arrow--next");
+    if (!slides.length) return;
+
+    let index = 0;
+
+    function show(i) {
+      index = (i + slides.length) % slides.length;
+      slides.forEach((slide, idx) => slide.classList.toggle("is-active", idx === index));
+      dots.forEach((dot, idx) => dot.classList.toggle("is-active", idx === index));
+    }
+
+    if (prevBtn) prevBtn.addEventListener("click", () => show(index - 1));
+    if (nextBtn) nextBtn.addEventListener("click", () => show(index + 1));
+    dots.forEach((dot, idx) => dot.addEventListener("click", () => show(idx)));
+
+    show(0);
   });
 }
