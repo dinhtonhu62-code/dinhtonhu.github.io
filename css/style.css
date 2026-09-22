@@ -479,7 +479,7 @@ textarea:focus-visible {
   height: min(360px, 70vw);
   border-radius: 50%;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center 65%;
   border: 6px solid #fff;
   box-shadow: var(--shadow-lg);
 }
