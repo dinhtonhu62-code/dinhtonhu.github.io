@@ -44,7 +44,7 @@ const I18N = {
   "about.goal.title": { vi: "Mục tiêu nghề nghiệp", en: "Career Goal" },
   "about.goal.text": { vi: "Trở thành<br />Marketing Leader", en: "Becoming a<br />Marketing Leader" },
   "about.location.title": { vi: "Địa điểm", en: "Location" },
-  "about.location.text": { vi: "Quận Gò Vấp<br />Tp. Hồ Chí Minh", en: "Go Vap District<br />Ho Chi Minh City" },
+  "about.location.text": { vi: "Quận 10<br />Tp. Hồ Chí Minh", en: "District 10<br />Ho Chi Minh City" },
 
   /* ---- Tools / Skills ---- */
   "skills.tag": { vi: "Kỹ năng & Công cụ", en: "Skills & Tools" },
