@@ -62,9 +62,12 @@
       </nav>
 
       <div class="navbar__actions">
-        <div class="lang-toggle" role="group" aria-label="Chọn ngôn ngữ / Choose language">
-          <button type="button" class="lang-toggle__option is-active" data-lang="vi">VI</button>
-          <button type="button" class="lang-toggle__option" data-lang="en">EN</button>
+        <div class="lang-toggle">
+          <label class="lang-toggle__label" data-i18n="lang.label">Ngôn ngữ</label>
+          <select class="lang-toggle__select" aria-label="Chọn ngôn ngữ / Choose language">
+            <option value="vi">VI</option>
+            <option value="en">EN</option>
+          </select>
         </div>
         <a href="../assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--primary btn--sm" data-i18n="nav.downloadCV">Download CV</a>
         <button class="navbar__toggle" id="navToggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="navMenu">

@@ -16,6 +16,7 @@ const I18N = {
   "nav.downloadCV": { vi: "Tải CV", en: "Download CV" },
   "nav.backToProjects": { vi: "Quay lại danh sách dự án", en: "Back to projects" },
   "nav.backToExperience": { vi: "Quay lại kinh nghiệm làm việc", en: "Back to experience" },
+  "lang.label": { vi: "Ngôn ngữ", en: "Language" },
 
   /* ---- Hero ---- */
   "hero.greeting": { vi: "Xin chào, tôi là", en: "Hello, I'm" },
@@ -363,23 +364,21 @@ function applyTranslations(lang) {
 
   document.documentElement.lang = lang === "en" ? "en" : "vi";
 
-  document.querySelectorAll(".lang-toggle__option").forEach((btn) => {
-    btn.classList.toggle("is-active", btn.dataset.lang === lang);
+  document.querySelectorAll(".lang-toggle__select").forEach((select) => {
+    select.value = lang;
   });
 }
 
-/* ---------- Nút chuyển đổi ngôn ngữ ---------- */
+/* ---------- Dropdown chuyển đổi ngôn ngữ ---------- */
 function initLanguageToggle() {
-  const toggles = document.querySelectorAll(".lang-toggle");
-  if (!toggles.length) return;
+  const selects = document.querySelectorAll(".lang-toggle__select");
+  if (!selects.length) return;
 
-  toggles.forEach((toggle) => {
-    toggle.querySelectorAll(".lang-toggle__option").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const lang = btn.dataset.lang;
-        setLang(lang);
-        applyTranslations(lang);
-      });
+  selects.forEach((select) => {
+    select.addEventListener("change", () => {
+      const lang = select.value;
+      setLang(lang);
+      applyTranslations(lang);
     });
   });
 }

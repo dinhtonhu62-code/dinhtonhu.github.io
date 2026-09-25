@@ -3050,37 +3050,55 @@ a.footer__info-item:hover {
 .lang-toggle {
   display: inline-flex;
   align-items: center;
-  background: var(--color-bg-alt);
-  border-radius: 999px;
-  padding: 3px;
-  gap: 2px;
+  gap: 8px;
 }
 
-.lang-toggle__option {
-  padding: 6px 11px;
+.lang-toggle__label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.lang-toggle__select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
   border-radius: 999px;
+  padding: 6px 28px 6px 14px;
   font-size: 12.5px;
   font-weight: 700;
-  color: var(--color-text-muted);
-  transition: background var(--transition), color var(--transition);
+  font-family: inherit;
+  color: var(--color-secondary);
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2351617e' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6,9 12,15 18,9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+  transition: border-color var(--transition);
 }
 
-.lang-toggle__option.is-active {
-  background: var(--color-primary);
-  color: #fff;
+.lang-toggle__select:hover,
+.lang-toggle__select:focus {
+  border-color: var(--color-primary);
+  outline: none;
 }
 
-.footer .lang-toggle {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.footer .lang-toggle__option {
+.footer .lang-toggle__label {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.footer .lang-toggle__option.is-active {
-  background: var(--color-primary);
+.footer .lang-toggle__select {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
   color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6,9 12,15 18,9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.footer .lang-toggle__select option {
+  color: #16233f;
 }
 
 @media (max-width: 900px) {
