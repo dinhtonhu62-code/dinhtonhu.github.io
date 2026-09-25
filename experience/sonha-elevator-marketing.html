@@ -55,14 +55,18 @@
 
       <nav class="navbar__nav" id="navMenu" aria-label="Menu chính">
         <ul class="navbar__list">
-          <li><a href="../index.html#home" class="navbar__link" data-nav>Trang chủ</a></li>
-          <li><a href="../index.html#experience" class="navbar__link" data-nav>Kinh nghiệm</a></li>
-          <li><a href="../index.html#contact" class="navbar__link" data-nav>Liên hệ</a></li>
+          <li><a href="../index.html#home" class="navbar__link" data-nav data-i18n="nav.home">Trang chủ</a></li>
+          <li><a href="../index.html#experience" class="navbar__link" data-nav data-i18n="nav.experience">Kinh nghiệm</a></li>
+          <li><a href="../index.html#contact" class="navbar__link" data-nav data-i18n="nav.contact">Liên hệ</a></li>
         </ul>
       </nav>
 
       <div class="navbar__actions">
-        <a href="../assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--primary btn--sm">Download CV</a>
+        <div class="lang-toggle" role="group" aria-label="Chọn ngôn ngữ / Choose language">
+          <button type="button" class="lang-toggle__option is-active" data-lang="vi">VI</button>
+          <button type="button" class="lang-toggle__option" data-lang="en">EN</button>
+        </div>
+        <a href="../assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--primary btn--sm" data-i18n="nav.downloadCV">Download CV</a>
         <button class="navbar__toggle" id="navToggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="navMenu">
           <svg class="icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
         </button>
@@ -77,10 +81,10 @@
       <div class="container">
         <a href="../index.html#experience" class="btn btn--outline btn--sm experience-hero__back">
           <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-          Quay lại kinh nghiệm làm việc
+          <span data-i18n="nav.backToExperience">Quay lại kinh nghiệm làm việc</span>
         </a>
-        <p class="section-tag">Kinh nghiệm</p>
-        <h1 class="section-title">Marketing Executive</h1>
+        <p class="section-tag" data-i18n="expdetail.tag">Kinh nghiệm</p>
+        <h1 class="section-title" data-i18n="exp.sonha.role">Marketing Executive</h1>
         <p class="experience-hero__company">Sơn Hà Elevator &middot; TP. Hồ Chí Minh</p>
         <div class="experience-hero__meta">
           <span class="timeline__duration">08/2026 — 09/2026</span>
@@ -94,43 +98,43 @@
     <!-- ============ EXPERIENCE DETAIL ============ -->
     <section class="experience-detail">
       <div class="container experience-detail__content">
-        <h2>Mô tả công việc</h2>
-        <p>
+        <h2 data-i18n="expdetail.jobDesc">Mô tả công việc</h2>
+        <p data-i18n="sonha.jobDesc">
           Tại Sơn Hà Elevator, tôi phụ trách triển khai SEO cho website công ty trong ngành thang máy — từ nghiên
           cứu từ khoá, tối ưu on-page, đến theo dõi hiệu suất bằng Google Search Console — đồng thời hỗ trợ nội
           dung Facebook để tăng độ nhận diện thương hiệu.
         </p>
 
-        <h2>Công việc thực hiện</h2>
+        <h2 data-i18n="expdetail.workDone">Công việc thực hiện</h2>
         <ul>
-          <li>Triển khai SEO website: keyword research, Keyword Gap, On-page SEO, content optimization và internal linking; theo dõi hiệu suất bằng Google Search Console và các công cụ SEO.</li>
-          <li>Tối ưu nội dung và landing page, góp phần tăng 14,1% organic clicks trung bình/ngày và cải thiện CTR từ 1,9% lên 2,9% trong 50 ngày so với giai đoạn 50 ngày trước đó.</li>
-          <li>Tối ưu nhóm từ khóa ngành thang máy; từ khóa "thang máy tải hàng" tăng 350% organic clicks (2 → 9) và cải thiện vị trí trung bình 7,5 → 6,5.</li>
-          <li>Xây dựng và tối ưu nội dung SEO cho trang sản phẩm, dịch vụ và bài viết website; theo dõi Clicks, Impressions, CTR và Ranking để đánh giá hiệu quả.</li>
-          <li>Hỗ trợ triển khai nội dung Facebook và theo dõi hiệu suất, với 25,3K views (+163,3%), 399 link clicks (+204,6%) và 77 interactions (+54%) trong kỳ báo cáo.</li>
+          <li data-i18n="exp.sonha.li1">Triển khai SEO website: keyword research, Keyword Gap, On-page SEO, content optimization và internal linking; theo dõi hiệu suất bằng Google Search Console và các công cụ SEO.</li>
+          <li data-i18n="exp.sonha.li2">Tối ưu nội dung và landing page, góp phần tăng 14,1% organic clicks trung bình/ngày và cải thiện CTR từ 1,9% lên 2,9% trong 50 ngày so với giai đoạn 50 ngày trước đó.</li>
+          <li data-i18n="exp.sonha.li3">Tối ưu nhóm từ khóa ngành thang máy; từ khóa "thang máy tải hàng" tăng 350% organic clicks (2 → 9) và cải thiện vị trí trung bình 7,5 → 6,5.</li>
+          <li data-i18n="exp.sonha.li4">Xây dựng và tối ưu nội dung SEO cho trang sản phẩm, dịch vụ và bài viết website; theo dõi Clicks, Impressions, CTR và Ranking để đánh giá hiệu quả.</li>
+          <li data-i18n="exp.sonha.li5">Hỗ trợ triển khai nội dung Facebook và theo dõi hiệu suất, với 25,3K views (+163,3%), 399 link clicks (+204,6%) và 77 interactions (+54%) trong kỳ báo cáo.</li>
         </ul>
 
-        <h2>Kết quả nổi bật</h2>
+        <h2 data-i18n="expdetail.notableResults">Kết quả nổi bật</h2>
         <div class="checklist-grid">
-          <div class="checklist-item"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Organic clicks trung bình/ngày +14,1%</span></div>
-          <div class="checklist-item"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>CTR tăng từ 1,9% lên 2,9% trong 50 ngày</span></div>
-          <div class="checklist-item"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Từ khoá "thang máy tải hàng": +350% clicks (2 → 9)</span></div>
-          <div class="checklist-item"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Vị trí trung bình cải thiện 7,5 → 6,5</span></div>
-          <div class="checklist-item"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>Facebook: 25,3K views (+163,3%)</span></div>
-          <div class="checklist-item"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span>399 link clicks (+204,6%), 77 interactions (+54%)</span></div>
+          <div class="checklist-item"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span data-i18n="sonha.result1">Organic clicks trung bình/ngày +14,1%</span></div>
+          <div class="checklist-item"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span data-i18n="sonha.result2">CTR tăng từ 1,9% lên 2,9% trong 50 ngày</span></div>
+          <div class="checklist-item"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span data-i18n="sonha.result3">Từ khoá "thang máy tải hàng": +350% clicks (2 → 9)</span></div>
+          <div class="checklist-item"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span data-i18n="sonha.result4">Vị trí trung bình cải thiện 7,5 → 6,5</span></div>
+          <div class="checklist-item"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span data-i18n="sonha.result5">Facebook: 25,3K views (+163,3%)</span></div>
+          <div class="checklist-item"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg><span data-i18n="sonha.result6">399 link clicks (+204,6%), 77 interactions (+54%)</span></div>
         </div>
 
         <!-- ============ VISUAL CASE STUDY ============ -->
         <div class="viz-section">
           <div class="viz-intro">
-            <p class="viz-intro__subtitle">SEO &amp; Digital Marketing Performance</p>
-            <h2 class="viz-intro__title">Dự án thực tế</h2>
+            <p class="viz-intro__subtitle" data-i18n="sonha.vizSubtitle">SEO &amp; Digital Marketing Performance</p>
+            <h2 class="viz-intro__title" data-i18n="sonha.vizTitle">Dự án thực tế</h2>
           </div>
 
           <!-- 01. SEO PERFORMANCE -->
           <div class="viz-group">
-            <span class="viz-group__eyebrow">01. SEO Performance</span>
-            <h3 class="viz-group__title">Google Search Console</h3>
+            <span class="viz-group__eyebrow" data-i18n="sonha.g1.eyebrow">01. SEO Performance</span>
+            <h3 class="viz-group__title" data-i18n="sonha.g1.title">Google Search Console</h3>
 
             <div class="viz-images viz-images--pair">
               <!--
@@ -140,41 +144,41 @@
                 </button>
                 (nhớ thêm khối lightbox #lightbox vào cuối trang nếu muốn bấm phóng to)
               -->
-              <div class="viz-placeholder">Ảnh 1<br />Google Search Console – Performance Overview</div>
-              <div class="viz-placeholder">Ảnh 2<br />Google Search Console – Search Queries</div>
+              <div class="viz-placeholder" data-i18n-html="sonha.g1.img1">Ảnh 1<br />Google Search Console – Performance Overview</div>
+              <div class="viz-placeholder" data-i18n-html="sonha.g1.img2">Ảnh 2<br />Google Search Console – Search Queries</div>
             </div>
             <p class="viz-caption">
-              <strong>Google Search Console</strong>
-              <span>SEO performance &amp; keyword monitoring</span>
+              <strong data-i18n="sonha.g1.captionTitle">Google Search Console</strong>
+              <span data-i18n="sonha.g1.captionDesc">SEO performance &amp; keyword monitoring</span>
             </p>
           </div>
 
           <!-- 02. KEYWORD & PAGE OPTIMIZATION -->
           <div class="viz-group">
-            <span class="viz-group__eyebrow">02. Keyword &amp; Page Optimization</span>
-            <h3 class="viz-group__title">Keyword Research &amp; On-page SEO</h3>
-            <p class="viz-group__desc">
+            <span class="viz-group__eyebrow" data-i18n="sonha.g2.eyebrow">02. Keyword &amp; Page Optimization</span>
+            <h3 class="viz-group__title" data-i18n="sonha.g2.title">Keyword Research &amp; On-page SEO</h3>
+            <p class="viz-group__desc" data-i18n="sonha.g2.desc">
               Conducted keyword research, competitor analysis and on-page optimization to identify content
               opportunities and improve organic search visibility.
             </p>
 
             <div class="viz-images viz-images--feature">
-              <div class="viz-placeholder viz-placeholder--main">Ảnh 1<br />Keyword Gap / Competitor Analysis</div>
-              <div class="viz-placeholder">Ảnh 2<br />Google Search Console – Pages</div>
-              <div class="viz-placeholder">Ảnh 3<br />Trang website / nội dung SEO đã tối ưu</div>
+              <div class="viz-placeholder viz-placeholder--main" data-i18n-html="sonha.g2.img1">Ảnh 1<br />Keyword Gap / Competitor Analysis</div>
+              <div class="viz-placeholder" data-i18n-html="sonha.g2.img2">Ảnh 2<br />Google Search Console – Pages</div>
+              <div class="viz-placeholder" data-i18n-html="sonha.g2.img3">Ảnh 3<br />Trang website / nội dung SEO đã tối ưu</div>
             </div>
           </div>
 
           <!-- 03. SEO CASE STUDY (carousel nhiều từ khoá) -->
           <div class="viz-group">
-            <span class="viz-group__eyebrow">03. SEO Case Study</span>
-            <h3 class="viz-group__title">Keyword Growth</h3>
+            <span class="viz-group__eyebrow" data-i18n="sonha.g3.eyebrow">03. SEO Case Study</span>
+            <h3 class="viz-group__title" data-i18n="sonha.g3.title">Keyword Growth</h3>
 
             <div class="viz-carousel" id="keywordCarousel">
 
               <!-- Slide 1: thang máy tải hàng (đã có số liệu thật) -->
               <div class="viz-carousel__slide is-active">
-                <p class="viz-carousel__keyword">Keyword Growth — "thang máy tải hàng"</p>
+                <p class="viz-carousel__keyword" data-i18n="sonha.kw1">Keyword Growth — "thang máy tải hàng"</p>
                 <div class="viz-compare">
                   <div class="viz-compare__card viz-compare__card--before">
                     <span class="viz-compare__label">Before</span>
@@ -205,7 +209,7 @@
                   <p class="viz-highlight__value">+350%</p>
                   <p class="viz-highlight__label">Organic Clicks</p>
                 </div>
-                <p class="viz-group__desc" style="max-width: none;">
+                <p class="viz-group__desc" style="max-width: none;" data-i18n="sonha.g3.desc">
                   Optimized SEO content and website pages around elevator-related search intent and monitored
                   performance through Google Search Console.
                 </p>
@@ -213,23 +217,23 @@
 
               <!-- Slide 2-5: chờ số liệu thật, tạm để "Đang cập nhật" -->
               <div class="viz-carousel__slide">
-                <p class="viz-carousel__keyword">Keyword Growth — "thang máy gia đình"</p>
-                <div class="viz-carousel__pending">Số liệu Before/After đang được cập nhật</div>
+                <p class="viz-carousel__keyword" data-i18n="sonha.kw2">Keyword Growth — "thang máy gia đình"</p>
+                <div class="viz-carousel__pending" data-i18n="sonha.pending">Số liệu Before/After đang được cập nhật</div>
               </div>
 
               <div class="viz-carousel__slide">
-                <p class="viz-carousel__keyword">Keyword Growth — "sửa chữa thang máy"</p>
-                <div class="viz-carousel__pending">Số liệu Before/After đang được cập nhật</div>
+                <p class="viz-carousel__keyword" data-i18n="sonha.kw3">Keyword Growth — "sửa chữa thang máy"</p>
+                <div class="viz-carousel__pending" data-i18n="sonha.pending">Số liệu Before/After đang được cập nhật</div>
               </div>
 
               <div class="viz-carousel__slide">
-                <p class="viz-carousel__keyword">Keyword Growth — "thang máy tải khách"</p>
-                <div class="viz-carousel__pending">Số liệu Before/After đang được cập nhật</div>
+                <p class="viz-carousel__keyword" data-i18n="sonha.kw4">Keyword Growth — "thang máy tải khách"</p>
+                <div class="viz-carousel__pending" data-i18n="sonha.pending">Số liệu Before/After đang được cập nhật</div>
               </div>
 
               <div class="viz-carousel__slide">
-                <p class="viz-carousel__keyword">Keyword Growth — "thang máy người khuyết tật"</p>
-                <div class="viz-carousel__pending">Số liệu Before/After đang được cập nhật</div>
+                <p class="viz-carousel__keyword" data-i18n="sonha.kw5">Keyword Growth — "thang máy người khuyết tật"</p>
+                <div class="viz-carousel__pending" data-i18n="sonha.pending">Số liệu Before/After đang được cập nhật</div>
               </div>
 
               <div class="viz-carousel__controls">
@@ -252,17 +256,17 @@
 
           <!-- 04. SEO OPPORTUNITY -->
           <div class="viz-group">
-            <span class="viz-group__eyebrow">04. SEO Opportunity</span>
+            <span class="viz-group__eyebrow" data-i18n="sonha.g4.eyebrow">04. SEO Opportunity</span>
             <div class="viz-opportunity">
               <div class="viz-opportunity__icon"><svg class="icon" aria-hidden="true"><use href="#icon-target"></use></svg></div>
               <div>
-                <p class="viz-opportunity__keyword">Keyword: "thang máy gia đình không phòng máy"</p>
+                <p class="viz-opportunity__keyword" data-i18n="sonha.g4.keyword">Keyword: "thang máy gia đình không phòng máy"</p>
                 <div class="viz-opportunity__metrics">
                   <div class="viz-opportunity__metric"><strong>2,385</strong><span>Impressions</span></div>
                   <div class="viz-opportunity__metric"><strong>0.2%</strong><span>CTR</span></div>
                   <div class="viz-opportunity__metric"><strong>35.8</strong><span>Average Position</span></div>
                 </div>
-                <p class="viz-opportunity__desc">
+                <p class="viz-opportunity__desc" data-i18n="sonha.g4.desc">
                   High search visibility with significant room for improvement in ranking and CTR, identified as
                   an SEO content optimization opportunity.
                 </p>
@@ -272,13 +276,13 @@
 
           <!-- 05. SOCIAL MEDIA -->
           <div class="viz-group">
-            <span class="viz-group__eyebrow">05. Social Media</span>
-            <h3 class="viz-group__title">Facebook Content Performance</h3>
+            <span class="viz-group__eyebrow" data-i18n="sonha.g5.eyebrow">05. Social Media</span>
+            <h3 class="viz-group__title" data-i18n="sonha.g5.title">Facebook Content Performance</h3>
 
             <div class="viz-images viz-images--feature">
-              <div class="viz-placeholder viz-placeholder--main">Ảnh 1<br />Facebook Analytics – tổng quan hiệu suất</div>
-              <div class="viz-placeholder">Ảnh 2<br />Facebook content / visual</div>
-              <div class="viz-placeholder">Ảnh 3<br />Facebook content / visual</div>
+              <div class="viz-placeholder viz-placeholder--main" data-i18n-html="sonha.g5.img1">Ảnh 1<br />Facebook Analytics – tổng quan hiệu suất</div>
+              <div class="viz-placeholder" data-i18n-html="sonha.g5.img2">Ảnh 2<br />Facebook content / visual</div>
+              <div class="viz-placeholder" data-i18n-html="sonha.g5.img3">Ảnh 3<br />Facebook content / visual</div>
             </div>
 
             <div class="viz-social-stats">
@@ -299,16 +303,16 @@
               </div>
             </div>
 
-            <p class="viz-group__desc" style="max-width: none; margin-top: 20px; margin-bottom: 0;">
+            <p class="viz-group__desc" style="max-width: none; margin-top: 20px; margin-bottom: 0;" data-i18n="sonha.g5.desc">
               Supported Facebook content execution and performance tracking.
             </p>
           </div>
         </div>
 
         <div class="experience-detail__nav">
-          <a href="../index.html#experience" class="btn btn--ghost btn--sm">Tất cả kinh nghiệm</a>
+          <a href="../index.html#experience" class="btn btn--ghost btn--sm" data-i18n="expdetail.allExperience">Tất cả kinh nghiệm</a>
           <a href="anya-content-creator.html" class="btn btn--primary btn--sm">
-            Kinh nghiệm tiếp theo <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+            <span data-i18n="expdetail.nextExperience">Kinh nghiệm tiếp theo</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
           </a>
         </div>
       </div>
@@ -319,13 +323,14 @@
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p>&copy; <span id="year"></span> Đinh Thị Tố Như. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> Đinh Thị Tố Như. <span data-i18n="footer.rights">All rights reserved.</span></p>
       <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
         <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
       </button>
     </div>
   </footer>
 
+  <script src="../js/i18n.js" defer></script>
   <script src="../js/script.js" defer></script>
 </body>
 </html>

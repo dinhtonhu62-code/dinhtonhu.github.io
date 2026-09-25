@@ -52,14 +52,18 @@
 
       <nav class="navbar__nav" id="navMenu" aria-label="Menu chính">
         <ul class="navbar__list">
-          <li><a href="../index.html#home" class="navbar__link" data-nav>Trang chủ</a></li>
-          <li><a href="../index.html#experience" class="navbar__link" data-nav>Kinh nghiệm</a></li>
-          <li><a href="../index.html#contact" class="navbar__link" data-nav>Liên hệ</a></li>
+          <li><a href="../index.html#home" class="navbar__link" data-nav data-i18n="nav.home">Trang chủ</a></li>
+          <li><a href="../index.html#experience" class="navbar__link" data-nav data-i18n="nav.experience">Kinh nghiệm</a></li>
+          <li><a href="../index.html#contact" class="navbar__link" data-nav data-i18n="nav.contact">Liên hệ</a></li>
         </ul>
       </nav>
 
       <div class="navbar__actions">
-        <a href="../assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--primary btn--sm">Download CV</a>
+        <div class="lang-toggle" role="group" aria-label="Chọn ngôn ngữ / Choose language">
+          <button type="button" class="lang-toggle__option is-active" data-lang="vi">VI</button>
+          <button type="button" class="lang-toggle__option" data-lang="en">EN</button>
+        </div>
+        <a href="../assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--primary btn--sm" data-i18n="nav.downloadCV">Download CV</a>
         <button class="navbar__toggle" id="navToggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="navMenu">
           <svg class="icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
         </button>
@@ -74,15 +78,15 @@
       <div class="container">
         <a href="../index.html#experience" class="btn btn--outline btn--sm experience-hero__back">
           <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-          Quay lại kinh nghiệm làm việc
+          <span data-i18n="nav.backToExperience">Quay lại kinh nghiệm làm việc</span>
         </a>
-        <p class="section-tag">Kinh nghiệm</p>
-        <h1 class="section-title">Thực tập sinh Marketing</h1>
+        <p class="section-tag" data-i18n="expdetail.tag">Kinh nghiệm</p>
+        <h1 class="section-title" data-i18n="exp.huseco.role">Thực tập sinh Marketing</h1>
         <p class="experience-hero__company">Huseco</p>
         <div class="experience-hero__meta">
           <span class="timeline__duration">9/2023 — 1/2024</span>
           <span class="tag">Facebook Ads</span>
-          <span class="tag">Content</span>
+          <span class="tag" data-i18n="huseco.tagContent">Content</span>
         </div>
       </div>
     </section>
@@ -90,49 +94,49 @@
     <!-- ============ EXPERIENCE DETAIL ============ -->
     <section class="experience-detail">
       <div class="container experience-detail__content">
-        <h2>Mô tả công việc</h2>
-        <p>
+        <h2 data-i18n="expdetail.jobDesc">Mô tả công việc</h2>
+        <p data-i18n="huseco.jobDesc">
           Trong thời gian thực tập tại Huseco, tôi phụ trách nội dung Fanpage, chạy quảng cáo Facebook Ads và hỗ trợ
           sản xuất hình ảnh sản phẩm, phối hợp cùng bộ phận Sales để đảm bảo nội dung marketing thống nhất.
         </p>
 
-        <h2>Công việc thực hiện</h2>
+        <h2 data-i18n="expdetail.workDone">Công việc thực hiện</h2>
         <ul>
-          <li>Lên kế hoạch và viết bài cho Fanpage của công ty trên nền tảng Facebook</li>
-          <li>Chạy quảng cáo Facebook Ads cho fanpage, tăng 10k follower</li>
-          <li>Thiết kế, quay chụp cho sản phẩm của công ty</li>
-          <li>Phối hợp với bộ phận Sales để nội dung thống nhất với các chiến dịch marketing của công ty</li>
+          <li data-i18n="huseco.li1">Lên kế hoạch và viết bài cho Fanpage của công ty trên nền tảng Facebook</li>
+          <li data-i18n="huseco.li2">Chạy quảng cáo Facebook Ads cho fanpage, tăng 10k follower</li>
+          <li data-i18n="huseco.li3">Thiết kế, quay chụp cho sản phẩm của công ty</li>
+          <li data-i18n="huseco.li4">Phối hợp với bộ phận Sales để nội dung thống nhất với các chiến dịch marketing của công ty</li>
         </ul>
 
-        <h2>Bài viết nổi bật trên Fanpage</h2>
-        <p>
+        <h2 data-i18n="huseco.fbTitle">Bài viết nổi bật trên Fanpage</h2>
+        <p data-i18n="huseco.fbDesc">
           Một số bài viết tôi đã lên kế hoạch và sản xuất nội dung cho Fanpage NOVA Health (thương hiệu máy lọc nước
           Huseco). Xem thêm tại Fanpage chính thức.
         </p>
         <a href="https://www.facebook.com/NovaHealthVN" target="_blank" rel="noopener noreferrer" class="btn btn--primary tiktok-channel-link">
-          Xem Fanpage NOVA Health <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+          <span data-i18n="huseco.viewFanpage">Xem Fanpage NOVA Health</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
         </a>
 
         <div class="post-gallery">
           <a href="https://www.facebook.com/NovaHealthVN/posts/pfbid02kkK2mAmgHpQjQGsjPNDTMvYCuqzNm7E3buwqP76VQtFdG76Y3ecnD1Ef1mMScForl" target="_blank" rel="noopener noreferrer" class="post-card">
             <img src="../assets/images/experience/facebook-post-1.png" alt="Bài viết Fanpage về máy lọc nước bảo vệ môi trường" loading="lazy" />
-            <span class="post-card__label">Bài viết 1 <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg></span>
+            <span class="post-card__label"><span data-i18n="huseco.post1">Bài viết 1</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg></span>
           </a>
-                    <a href="https://www.facebook.com/NovaHealthVN/posts/pfbid0mDccVpiPyVS9igS352AUzuVRwzNUZczi7YEAjVNshD186ALcEUvnyCyi8NDoNYERl" target="_blank" rel="noopener noreferrer" class="post-card">
+          <a href="https://www.facebook.com/NovaHealthVN/posts/pfbid0mDccVpiPyVS9igS352AUzuVRwzNUZczi7YEAjVNshD186ALcEUvnyCyi8NDoNYERl" target="_blank" rel="noopener noreferrer" class="post-card">
             <img src="../assets/images/experience/facebook-post-2.png" alt="Bài viết Fanpage giới thiệu máy lọc nước F7" loading="lazy" />
-            <span class="post-card__label">Bài viết 2 <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg></span>
+            <span class="post-card__label"><span data-i18n="huseco.post2">Bài viết 2</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg></span>
           </a>
           <a href="https://www.facebook.com/NovaHealthVN/posts/pfbid0a9MGDw7pEVhdLdFBKBXpHpc2CVXY8Xre7ieGW1MQzNnZ3Tv9XdDRDvazQMS53F1cl" target="_blank" rel="noopener noreferrer" class="post-card">
             <img src="../assets/images/experience/facebook-post-3.png" alt="Bài viết Fanpage về lượng nước cần nạp cho cơ thể" loading="lazy" />
-            <span class="post-card__label">Bài viết 3 <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg></span>
+            <span class="post-card__label"><span data-i18n="huseco.post3">Bài viết 3</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg></span>
           </a>
         </div>
 
         <div class="experience-detail__nav">
           <a href="anya-customer-care.html" class="btn btn--ghost btn--sm">
-            <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> Kinh nghiệm trước
+            <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> <span data-i18n="expdetail.prevExperience">Kinh nghiệm trước</span>
           </a>
-          <a href="../index.html#experience" class="btn btn--primary btn--sm">Tất cả kinh nghiệm</a>
+          <a href="../index.html#experience" class="btn btn--primary btn--sm" data-i18n="expdetail.allExperience">Tất cả kinh nghiệm</a>
         </div>
       </div>
     </section>
@@ -142,13 +146,14 @@
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p>&copy; <span id="year"></span> Đinh Thị Tố Như. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> Đinh Thị Tố Như. <span data-i18n="footer.rights">All rights reserved.</span></p>
       <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
         <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
       </button>
     </div>
   </footer>
 
+  <script src="../js/i18n.js" defer></script>
   <script src="../js/script.js" defer></script>
 </body>
 </html>

@@ -73,6 +73,8 @@
     <symbol id="icon-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
     <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
     <symbol id="icon-arrow-up" viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5,12 12,5 19,12"/></symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12,19 5,12 12,5"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></symbol>
     <symbol id="icon-menu" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
     <symbol id="icon-x" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
     <symbol id="icon-external-link" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></symbol>
@@ -104,18 +106,22 @@
 
       <nav class="navbar__nav" id="navMenu" aria-label="Menu chính">
         <ul class="navbar__list">
-          <li><a href="#home" class="navbar__link" data-nav>Home</a></li>
-          <li><a href="#about" class="navbar__link" data-nav>About</a></li>
-          <li><a href="#skills" class="navbar__link" data-nav>Skills</a></li>
-          <li><a href="#experience" class="navbar__link" data-nav>Experience</a></li>
-          <li><a href="#projects" class="navbar__link" data-nav>Projects</a></li>
-          <li><a href="#certificates" class="navbar__link" data-nav>Certificates</a></li>
-          <li><a href="#contact" class="navbar__link" data-nav>Contact</a></li>
+          <li><a href="#home" class="navbar__link" data-nav data-i18n="nav.home">Home</a></li>
+          <li><a href="#about" class="navbar__link" data-nav data-i18n="nav.about">About</a></li>
+          <li><a href="#skills" class="navbar__link" data-nav data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#experience" class="navbar__link" data-nav data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#projects" class="navbar__link" data-nav data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#certificates" class="navbar__link" data-nav data-i18n="nav.certificates">Certificates</a></li>
+          <li><a href="#contact" class="navbar__link" data-nav data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
 
       <div class="navbar__actions">
-        <a href="assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--primary btn--sm">Download CV</a>
+        <div class="lang-toggle" role="group" aria-label="Chọn ngôn ngữ / Choose language">
+          <button type="button" class="lang-toggle__option is-active" data-lang="vi">VI</button>
+          <button type="button" class="lang-toggle__option" data-lang="en">EN</button>
+        </div>
+        <a href="assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--primary btn--sm" data-i18n="nav.downloadCV">Download CV</a>
         <button class="navbar__toggle" id="navToggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="navMenu">
           <svg class="icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
         </button>
@@ -141,22 +147,22 @@
         </div>
 
         <div class="hero__content">
-          <p class="hero__greeting reveal" data-reveal="fade-up">Xin chào, tôi là</p>
+          <p class="hero__greeting reveal" data-reveal="fade-up" data-i18n="hero.greeting">Xin chào, tôi là</p>
           <h1 class="hero__name reveal" data-reveal="fade-up" data-reveal-delay="1">Đinh Thị Tố Như</h1>
           <p class="hero__role reveal" data-reveal="fade-up" data-reveal-delay="2">
             <span id="typedText" class="hero__role-typed"></span><span class="hero__cursor" aria-hidden="true">|</span>
           </p>
-          <p class="hero__bio reveal" data-reveal="fade-up" data-reveal-delay="3">
+          <p class="hero__bio reveal" data-reveal="fade-up" data-reveal-delay="3" data-i18n="hero.bio">
             Sinh viên ngành Marketing tại Đại học Nguyễn Tất Thành với kinh nghiệm thực tế qua các vị trí Content
             Creator, chăm sóc khách hàng và thực tập Marketing. Thành thạo sản xuất nội dung TikTok, chạy quảng cáo
             Facebook/Meta Ads, tối ưu SEO On-page.
           </p>
 
           <div class="hero__actions reveal" data-reveal="fade-up" data-reveal-delay="4">
-            <a href="#projects" class="btn btn--primary">Xem Dự Án</a>
+            <a href="#projects" class="btn btn--primary" data-i18n="hero.viewProjects">Xem Dự Án</a>
             <a href="assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--outline">
               <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
-              Download CV
+              <span data-i18n="nav.downloadCV">Download CV</span>
             </a>
           </div>
 
@@ -180,9 +186,9 @@
       <div class="section-blob section-blob--primary" style="top:-100px; right:-80px;" aria-hidden="true"></div>
       <div class="section-blob section-blob--accent" style="bottom:-100px; left:-80px;" aria-hidden="true"></div>
       <div class="container">
-        <p class="section-tag reveal" data-reveal="fade-up">Giới thiệu</p>
-        <h2 class="section-title reveal" data-reveal="fade-up">Về Tôi</h2>
-        <p class="about__desc reveal" data-reveal="fade-up">
+        <p class="section-tag reveal" data-reveal="fade-up" data-i18n="about.tag">Giới thiệu</p>
+        <h2 class="section-title reveal" data-reveal="fade-up" data-i18n="about.title">Về Tôi</h2>
+        <p class="about__desc reveal" data-reveal="fade-up" data-i18n="about.desc">
           Tôi là sinh viên ngành Marketing, yêu thích Content Marketing, TikTok và SEO On-page. Qua các vị trí thực
           tập và part-time, tôi đã tích lũy kinh nghiệm lên kế hoạch nội dung, chạy quảng cáo Facebook/Meta Ads và
           tối ưu SEO cho website. Mục tiêu ngắn hạn của tôi là hoàn thiện đầy đủ các kỹ năng cần thiết để trở thành
@@ -193,23 +199,23 @@
         <div class="about__grid">
           <div class="about-card reveal" data-reveal="fade-up" data-reveal-delay="1">
             <div class="about-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></div>
-            <h3 class="about-card__title">Education</h3>
-            <p class="about-card__text">Marketing (GPA 3.3/4.0)<br />Đại học Nguyễn Tất Thành</p>
+            <h3 class="about-card__title" data-i18n="about.education.title">Education</h3>
+            <p class="about-card__text" data-i18n-html="about.education.text">Marketing (GPA 3.3/4.0)<br />Đại học Nguyễn Tất Thành</p>
           </div>
           <div class="about-card reveal" data-reveal="fade-up" data-reveal-delay="2">
             <div class="about-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-briefcase"></use></svg></div>
-            <h3 class="about-card__title">Experience</h3>
-            <p class="about-card__text">2023 — Nay<br />Marketing &amp; Content</p>
+            <h3 class="about-card__title" data-i18n="about.experience.title">Experience</h3>
+            <p class="about-card__text" data-i18n-html="about.experience.text">2023 — Nay<br />Marketing &amp; Content</p>
           </div>
           <div class="about-card reveal" data-reveal="fade-up" data-reveal-delay="3">
             <div class="about-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-target"></use></svg></div>
-            <h3 class="about-card__title">Career Goal</h3>
-            <p class="about-card__text">Trở thành<br />Marketing Leader</p>
+            <h3 class="about-card__title" data-i18n="about.goal.title">Career Goal</h3>
+            <p class="about-card__text" data-i18n-html="about.goal.text">Trở thành<br />Marketing Leader</p>
           </div>
           <div class="about-card reveal" data-reveal="fade-up" data-reveal-delay="4">
             <div class="about-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg></div>
-            <h3 class="about-card__title">Location</h3>
-            <p class="about-card__text">Quận Gò Vấp<br />Tp. Hồ Chí Minh</p>
+            <h3 class="about-card__title" data-i18n="about.location.title">Location</h3>
+            <p class="about-card__text" data-i18n-html="about.location.text">Quận Gò Vấp<br />Tp. Hồ Chí Minh</p>
           </div>
         </div>
       </div>
@@ -218,21 +224,21 @@
     <!-- ============ SECTION 3: TOOLS ============ -->
     <section id="skills" class="skills">
       <div class="container">
-        <p class="section-tag reveal" data-reveal="fade-up">Kỹ năng &amp; Công cụ</p>
-        <h2 class="section-title reveal" data-reveal="fade-up">Tools</h2>
+        <p class="section-tag reveal" data-reveal="fade-up" data-i18n="skills.tag">Kỹ năng &amp; Công cụ</p>
+        <h2 class="section-title reveal" data-reveal="fade-up" data-i18n="skills.title">Tools</h2>
 
         <div class="tools-grid">
           <div class="tool-box reveal" data-reveal="fade-up" data-reveal-delay="1">
-            <h3 class="tool-box__title"><span class="tool-box__emoji">💬</span> Kỹ năng mềm</h3>
+            <h3 class="tool-box__title"><span class="tool-box__emoji">💬</span> <span data-i18n="skills.soft.title">Kỹ năng mềm</span></h3>
             <div class="tool-box__tags">
-              <span class="tag">Giao tiếp</span>
-              <span class="tag">Làm việc nhóm</span>
-              <span class="tag">Quản lý thời gian</span>
+              <span class="tag" data-i18n="skills.soft.communication">Giao tiếp</span>
+              <span class="tag" data-i18n="skills.soft.teamwork">Làm việc nhóm</span>
+              <span class="tag" data-i18n="skills.soft.timeManagement">Quản lý thời gian</span>
             </div>
           </div>
 
           <div class="tool-box reveal" data-reveal="fade-up" data-reveal-delay="2">
-            <h3 class="tool-box__title"><span class="tool-box__emoji">📢</span> Marketing &amp; SEO</h3>
+            <h3 class="tool-box__title"><span class="tool-box__emoji">📢</span> <span data-i18n="skills.marketing.title">Marketing &amp; SEO</span></h3>
             <div class="tool-box__tags">
               <span class="tag">Meta Ads</span>
               <span class="tag">TikTok Content Marketing</span>
@@ -242,7 +248,7 @@
           </div>
 
           <div class="tool-box reveal" data-reveal="fade-up" data-reveal-delay="3">
-            <h3 class="tool-box__title"><span class="tool-box__emoji">🎨</span> Content &amp; Design</h3>
+            <h3 class="tool-box__title"><span class="tool-box__emoji">🎨</span> <span data-i18n="skills.content.title">Content &amp; Design</span></h3>
             <div class="tool-box__tags">
               <span class="tag">Canva</span>
               <span class="tag">CapCut</span>
@@ -250,7 +256,7 @@
           </div>
 
           <div class="tool-box reveal" data-reveal="fade-up" data-reveal-delay="4">
-            <h3 class="tool-box__title"><span class="tool-box__emoji">🤖</span> AI Tools</h3>
+            <h3 class="tool-box__title"><span class="tool-box__emoji">🤖</span> <span data-i18n="skills.ai.title">AI Tools</span></h3>
             <div class="tool-box__tags">
               <span class="tag">ChatGPT</span>
               <span class="tag">Claude AI</span>
@@ -260,124 +266,140 @@
       </div>
     </section>
 
-    <!-- ============ SECTION 4: EXPERIENCE ============ -->
+    <!-- ============ SECTION 4: EXPERIENCE (slider ngang) ============ -->
     <section id="experience" class="experience">
       <div class="section-blob section-blob--accent" style="top:-90px; left:-70px;" aria-hidden="true"></div>
       <div class="section-blob section-blob--primary" style="bottom:-90px; right:-70px;" aria-hidden="true"></div>
       <div class="container">
-        <p class="section-tag reveal" data-reveal="fade-up">Kinh nghiệm</p>
-        <h2 class="section-title reveal" data-reveal="fade-up">Experience</h2>
+        <p class="section-tag reveal" data-reveal="fade-up" data-i18n="experience.tag">Kinh nghiệm</p>
+        <h2 class="section-title reveal" data-reveal="fade-up" data-i18n="experience.title">Experience</h2>
 
-        <div class="exp-list">
-          <article class="exp-card reveal" data-reveal="fade-up">
-            <div class="exp-card__head">
-              <div class="exp-card__logo" aria-hidden="true"><img src="assets/images/experience/sonha-logo.png" alt="" /></div>
-              <div>
-                <p class="exp-card__company">Sơn Hà Elevator</p>
-                <p class="exp-card__role"><a href="experience/sonha-elevator-marketing.html">Marketing Executive</a></p>
-              </div>
-            </div>
-            <div class="exp-card__badges">
-              <span class="timeline__duration">08/2026 — 09/2026</span>
-              <span class="exp-card__type">Full-time</span>
-            </div>
-            <ul class="exp-card__list">
-              <li>Triển khai SEO website: keyword research, Keyword Gap, On-page SEO, content optimization và internal linking; theo dõi hiệu suất bằng Google Search Console và các công cụ SEO.</li>
-              <li>Tối ưu nội dung và landing page, góp phần tăng 14,1% organic clicks trung bình/ngày và cải thiện CTR từ 1,9% lên 2,9% trong 50 ngày so với giai đoạn 50 ngày trước đó.</li>
-              <li>Tối ưu nhóm từ khóa ngành thang máy; từ khóa "thang máy tải hàng" tăng 350% organic clicks (2 → 9) và cải thiện vị trí trung bình 7,5 → 6,5.</li>
-              <li>Xây dựng và tối ưu nội dung SEO cho trang sản phẩm, dịch vụ và bài viết website; theo dõi Clicks, Impressions, CTR và Ranking để đánh giá hiệu quả.</li>
-              <li>Hỗ trợ triển khai nội dung Facebook và theo dõi hiệu suất, với 25,3K views (+163,3%), 399 link clicks (+204,6%) và 77 interactions (+54%) trong kỳ báo cáo.</li>
-            </ul>
-            <div class="exp-card__tags">
-              <span class="tag">SEO On-page</span>
-              <span class="tag">Keyword Research</span>
-              <span class="tag">Google Search Console</span>
-            </div>
-            <a href="experience/sonha-elevator-marketing.html" class="btn btn--sm btn--primary">
-              Xem chi tiết <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
-            </a>
-          </article>
+        <div class="exp-slider reveal" data-reveal="fade-up">
+          <div class="exp-slider__viewport">
+            <div class="exp-slider__track">
 
-          <article class="exp-card reveal" data-reveal="fade-up">
-            <div class="exp-card__head">
-              <div class="exp-card__logo" aria-hidden="true"><img src="assets/images/experience/anya-store-logo.jpg" alt="" /></div>
-              <div>
-                <p class="exp-card__company">Anya Store</p>
-                <p class="exp-card__role"><a href="experience/anya-content-creator.html">Content Creator Part-time</a></p>
-              </div>
-            </div>
-            <div class="exp-card__badges">
-              <span class="timeline__duration">1/2025 — 6/2025</span>
-              <span class="exp-card__type">Part-time</span>
-            </div>
-            <ul class="exp-card__list">
-              <li>Nghiên cứu xu hướng TikTok và xây dựng kế hoạch nội dung, sản xuất 10–15 video/tháng, có video đạt hơn 10.000 lượt xem tự nhiên.</li>
-              <li>Theo dõi và phân tích hiệu suất nội dung để tối ưu tỷ lệ tương tác.</li>
-              <li>Hỗ trợ xây dựng nhận diện thương hiệu trên TikTok.</li>
-            </ul>
-            <div class="exp-card__tags">
-              <span class="tag">TikTok Content Marketing</span>
-              <span class="tag">Video Production</span>
-              <span class="tag">CapCut</span>
-            </div>
-            <a href="experience/anya-content-creator.html" class="btn btn--sm btn--primary">
-              Xem chi tiết <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
-            </a>
-          </article>
+              <article class="exp-card">
+                <div class="exp-card__head">
+                  <div class="exp-card__logo" aria-hidden="true"><img src="assets/images/experience/sonha-logo.png" alt="" /></div>
+                  <div>
+                    <p class="exp-card__company">Sơn Hà Elevator</p>
+                    <p class="exp-card__role"><a href="experience/sonha-elevator-marketing.html" data-i18n="exp.sonha.role">Marketing Executive</a></p>
+                  </div>
+                </div>
+                <div class="exp-card__badges">
+                  <span class="timeline__duration">08/2026 — 09/2026</span>
+                  <span class="exp-card__type" data-i18n="experience.type.fulltime">Full-time</span>
+                </div>
+                <ul class="exp-card__list">
+                  <li data-i18n="exp.sonha.li1">Triển khai SEO website: keyword research, Keyword Gap, On-page SEO, content optimization và internal linking; theo dõi hiệu suất bằng Google Search Console và các công cụ SEO.</li>
+                  <li data-i18n="exp.sonha.li2">Tối ưu nội dung và landing page, góp phần tăng 14,1% organic clicks trung bình/ngày và cải thiện CTR từ 1,9% lên 2,9% trong 50 ngày so với giai đoạn 50 ngày trước đó.</li>
+                  <li data-i18n="exp.sonha.li3">Tối ưu nhóm từ khóa ngành thang máy; từ khóa "thang máy tải hàng" tăng 350% organic clicks (2 → 9) và cải thiện vị trí trung bình 7,5 → 6,5.</li>
+                  <li data-i18n="exp.sonha.li4">Xây dựng và tối ưu nội dung SEO cho trang sản phẩm, dịch vụ và bài viết website; theo dõi Clicks, Impressions, CTR và Ranking để đánh giá hiệu quả.</li>
+                  <li data-i18n="exp.sonha.li5">Hỗ trợ triển khai nội dung Facebook và theo dõi hiệu suất, với 25,3K views (+163,3%), 399 link clicks (+204,6%) và 77 interactions (+54%) trong kỳ báo cáo.</li>
+                </ul>
+                <div class="exp-card__tags">
+                  <span class="tag">SEO On-page</span>
+                  <span class="tag">Keyword Research</span>
+                  <span class="tag">Google Search Console</span>
+                </div>
+                <a href="experience/sonha-elevator-marketing.html" class="btn btn--sm btn--primary">
+                  <span data-i18n="experience.viewDetail">Xem chi tiết</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+                </a>
+              </article>
 
-          <article class="exp-card reveal" data-reveal="fade-up">
-            <div class="exp-card__head">
-              <div class="exp-card__logo" aria-hidden="true"><img src="assets/images/experience/anya-store-logo.jpg" alt="" /></div>
-              <div>
-                <p class="exp-card__company">Anya Store</p>
-                <p class="exp-card__role"><a href="experience/anya-customer-care.html">Chăm sóc khách hàng Part-time</a></p>
-              </div>
-            </div>
-            <div class="exp-card__badges">
-              <span class="timeline__duration">12/2023 — 12/2024</span>
-              <span class="exp-card__type">Part-time</span>
-            </div>
-            <ul class="exp-card__list">
-              <li>Theo dõi hiệu suất bán hàng trên TikTok Shop, phân tích phản hồi khách hàng để đề xuất cải thiện nội dung và sản phẩm.</li>
-              <li>Hỗ trợ tối ưu tỷ lệ chuyển đổi thông qua tư vấn khách hàng.</li>
-              <li>Phối hợp với bộ phận Content và Livestream.</li>
-            </ul>
-            <div class="exp-card__tags">
-              <span class="tag">Customer Service</span>
-              <span class="tag">TikTok Shop</span>
-              <span class="tag">Conversion Optimization</span>
-            </div>
-            <a href="experience/anya-customer-care.html" class="btn btn--sm btn--primary">
-              Xem chi tiết <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
-            </a>
-          </article>
+              <article class="exp-card">
+                <div class="exp-card__head">
+                  <div class="exp-card__logo" aria-hidden="true"><img src="assets/images/experience/anya-store-logo.jpg" alt="" /></div>
+                  <div>
+                    <p class="exp-card__company">Anya Store</p>
+                    <p class="exp-card__role"><a href="experience/anya-content-creator.html" data-i18n="exp.cc.role">Content Creator Part-time</a></p>
+                  </div>
+                </div>
+                <div class="exp-card__badges">
+                  <span class="timeline__duration">1/2025 — 6/2025</span>
+                  <span class="exp-card__type" data-i18n="experience.type.parttime">Part-time</span>
+                </div>
+                <ul class="exp-card__list">
+                  <li data-i18n="exp.cc.li1">Nghiên cứu xu hướng TikTok và xây dựng kế hoạch nội dung, sản xuất 10–15 video/tháng, có video đạt hơn 10.000 lượt xem tự nhiên.</li>
+                  <li data-i18n="exp.cc.li2">Theo dõi và phân tích hiệu suất nội dung để tối ưu tỷ lệ tương tác.</li>
+                  <li data-i18n="exp.cc.li3">Hỗ trợ xây dựng nhận diện thương hiệu trên TikTok.</li>
+                </ul>
+                <div class="exp-card__tags">
+                  <span class="tag">TikTok Content Marketing</span>
+                  <span class="tag">Video Production</span>
+                  <span class="tag">CapCut</span>
+                </div>
+                <a href="experience/anya-content-creator.html" class="btn btn--sm btn--primary">
+                  <span data-i18n="experience.viewDetail">Xem chi tiết</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+                </a>
+              </article>
 
-          <article class="exp-card reveal" data-reveal="fade-up">
-            <div class="exp-card__head">
-              <div class="exp-card__logo" aria-hidden="true"><img src="assets/images/experience/huseco-logo.png" alt="" /></div>
-              <div>
-                <p class="exp-card__company">Huseco</p>
-                <p class="exp-card__role"><a href="experience/huseco-marketing-intern.html">Thực tập sinh Marketing</a></p>
-              </div>
+              <article class="exp-card">
+                <div class="exp-card__head">
+                  <div class="exp-card__logo" aria-hidden="true"><img src="assets/images/experience/anya-store-logo.jpg" alt="" /></div>
+                  <div>
+                    <p class="exp-card__company">Anya Store</p>
+                    <p class="exp-card__role"><a href="experience/anya-customer-care.html" data-i18n="exp.care.role">Chăm sóc khách hàng Part-time</a></p>
+                  </div>
+                </div>
+                <div class="exp-card__badges">
+                  <span class="timeline__duration">12/2023 — 12/2024</span>
+                  <span class="exp-card__type" data-i18n="experience.type.parttime">Part-time</span>
+                </div>
+                <ul class="exp-card__list">
+                  <li data-i18n="exp.care.li1">Theo dõi hiệu suất bán hàng trên TikTok Shop, phân tích phản hồi khách hàng để đề xuất cải thiện nội dung và sản phẩm.</li>
+                  <li data-i18n="exp.care.li2">Hỗ trợ tối ưu tỷ lệ chuyển đổi thông qua tư vấn khách hàng.</li>
+                  <li data-i18n="exp.care.li3">Phối hợp với bộ phận Content và Livestream.</li>
+                </ul>
+                <div class="exp-card__tags">
+                  <span class="tag">Customer Service</span>
+                  <span class="tag">TikTok Shop</span>
+                  <span class="tag">Conversion Optimization</span>
+                </div>
+                <a href="experience/anya-customer-care.html" class="btn btn--sm btn--primary">
+                  <span data-i18n="experience.viewDetail">Xem chi tiết</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+                </a>
+              </article>
+
+              <article class="exp-card">
+                <div class="exp-card__head">
+                  <div class="exp-card__logo" aria-hidden="true"><img src="assets/images/experience/huseco-logo.png" alt="" /></div>
+                  <div>
+                    <p class="exp-card__company">Huseco</p>
+                    <p class="exp-card__role"><a href="experience/huseco-marketing-intern.html" data-i18n="exp.huseco.role">Thực tập sinh Marketing</a></p>
+                  </div>
+                </div>
+                <div class="exp-card__badges">
+                  <span class="timeline__duration">9/2023 — 1/2024</span>
+                  <span class="exp-card__type" data-i18n="experience.type.internship">Internship</span>
+                </div>
+                <ul class="exp-card__list">
+                  <li data-i18n="exp.huseco.li1">Lên kế hoạch và viết bài cho Fanpage của công ty trên nền tảng Facebook, chạy quảng cáo Facebook Ads cho fanpage giúp tăng 10k follower.</li>
+                  <li data-i18n="exp.huseco.li2">Thiết kế, quay chụp cho sản phẩm của công ty.</li>
+                  <li data-i18n="exp.huseco.li3">Phối hợp với bộ phận Sales để nội dung thống nhất với các chiến dịch marketing của công ty.</li>
+                </ul>
+                <div class="exp-card__tags">
+                  <span class="tag">Facebook Ads</span>
+                  <span class="tag">Content Writing</span>
+                  <span class="tag">Product Photography</span>
+                </div>
+                <a href="experience/huseco-marketing-intern.html" class="btn btn--sm btn--primary">
+                  <span data-i18n="experience.viewDetail">Xem chi tiết</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+                </a>
+              </article>
+
             </div>
-            <div class="exp-card__badges">
-              <span class="timeline__duration">9/2023 — 1/2024</span>
-              <span class="exp-card__type">Internship</span>
-            </div>
-            <ul class="exp-card__list">
-              <li>Lên kế hoạch và viết bài cho Fanpage của công ty trên nền tảng Facebook, chạy quảng cáo Facebook Ads cho fanpage giúp tăng 10k follower.</li>
-              <li>Thiết kế, quay chụp cho sản phẩm của công ty.</li>
-              <li>Phối hợp với bộ phận Sales để nội dung thống nhất với các chiến dịch marketing của công ty.</li>
-            </ul>
-            <div class="exp-card__tags">
-              <span class="tag">Facebook Ads</span>
-              <span class="tag">Content Writing</span>
-              <span class="tag">Product Photography</span>
-            </div>
-            <a href="experience/huseco-marketing-intern.html" class="btn btn--sm btn--primary">
-              Xem chi tiết <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
-            </a>
-          </article>
+          </div>
+
+          <div class="exp-slider__controls">
+            <button type="button" class="exp-slider__arrow exp-slider__arrow--prev" aria-label="Kinh nghiệm trước">
+              <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+            </button>
+            <div class="exp-slider__dots"></div>
+            <button type="button" class="exp-slider__arrow exp-slider__arrow--next" aria-label="Kinh nghiệm tiếp theo">
+              <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -385,13 +407,13 @@
     <!-- ============ SECTION 5: FEATURED PROJECTS ============ -->
     <section id="projects" class="projects">
       <div class="container">
-        <p class="section-tag reveal" data-reveal="fade-up">Dự án</p>
-        <h2 class="section-title reveal" data-reveal="fade-up">Featured Projects</h2>
+        <p class="section-tag reveal" data-reveal="fade-up" data-i18n="projects.tag">Dự án</p>
+        <h2 class="section-title reveal" data-reveal="fade-up" data-i18n="projects.title">Featured Projects</h2>
 
         <div class="projects__filter reveal" data-reveal="fade-up" role="tablist" aria-label="Lọc dự án theo danh mục">
-          <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
-          <button class="filter-btn" data-filter="seo" role="tab" aria-selected="false">SEO</button>
-          <button class="filter-btn" data-filter="website" role="tab" aria-selected="false">Website</button>
+          <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true" data-i18n="projects.filter.all">All</button>
+          <button class="filter-btn" data-filter="seo" role="tab" aria-selected="false" data-i18n="projects.filter.seo">SEO</button>
+          <button class="filter-btn" data-filter="website" role="tab" aria-selected="false" data-i18n="projects.filter.website">Website</button>
         </div>
 
         <div class="projects__grid" id="projectsGrid">
@@ -402,17 +424,17 @@
             </a>
             <div class="project-card__body">
               <h3 class="project-card__title"><a href="projects/ai-assisted-website-development.html">AI-Assisted Website Development</a></h3>
-              <p class="project-card__desc">Thiết kế và xây dựng website iUnlock (dịch vụ mở khoá iCloud) bằng Next.js với sự hỗ trợ của Claude AI — từ lên ý tưởng, viết prompt, chỉnh sửa code đến tối ưu giao diện.</p>
+              <p class="project-card__desc" data-i18n="proj.aiassisted.desc">Thiết kế và xây dựng website iUnlock (dịch vụ mở khoá iCloud) bằng Next.js với sự hỗ trợ của Claude AI — từ lên ý tưởng, viết prompt, chỉnh sửa code đến tối ưu giao diện.</p>
               <div class="project-card__tags">
                 <span class="tag">UI/UX Design</span><span class="tag">Content Strategy</span><span class="tag">AI Prompt Strategy</span>
               </div>
-              <p class="project-card__result"><strong>Kết quả:</strong> Hoàn thiện website dịch vụ nhiều trang, responsive đầy đủ, deploy thành công trên Vercel</p>
+              <p class="project-card__result"><strong data-i18n="projects.result">Kết quả</strong>: <span data-i18n="proj.aiassisted.result">Hoàn thiện website dịch vụ nhiều trang, responsive đầy đủ, deploy thành công trên Vercel</span></p>
               <div class="project-card__actions">
                 <span class="timeline__duration">6/2026</span>
                 <a href="https://iunlockvn.com" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--ghost">
-                  Website <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+                  <span data-i18n="projects.website">Website</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
                 </a>
-                <a href="projects/ai-assisted-website-development.html" class="btn btn--sm btn--primary">
+                <a href="projects/ai-assisted-website-development.html" class="btn btn--sm btn--primary" data-i18n="projects.viewDetail">
                   Xem chi tiết
                 </a>
               </div>
@@ -425,41 +447,40 @@
             </a>
             <div class="project-card__body">
               <h3 class="project-card__title"><a href="projects/eyedia.html">SEO Website Mắt Kính Eyedia</a></h3>
-              <p class="project-card__desc">Nghiên cứu bộ từ khoá ngành "mắt kính", tối ưu SEO On-page cho 40+ bài viết, tối ưu Title, Meta Description, Heading và xây dựng Social Entity trên Facebook, TikTok.</p>
+              <p class="project-card__desc" data-i18n="proj.eyedia.desc">Nghiên cứu bộ từ khoá ngành "mắt kính", tối ưu SEO On-page cho 40+ bài viết, tối ưu Title, Meta Description, Heading và xây dựng Social Entity trên Facebook, TikTok.</p>
               <div class="project-card__tags">
                 <span class="tag">SEO On-page</span><span class="tag">Keyword Research</span><span class="tag">Social Entity</span>
               </div>
-              <p class="project-card__result"><strong>Kết quả:</strong> Bài viết Facebook nằm trong Top tìm kiếm của Google với từ khoá thương hiệu</p>
+              <p class="project-card__result"><strong data-i18n="projects.result">Kết quả</strong>: <span data-i18n="proj.eyedia.result">Bài viết Facebook nằm trong Top tìm kiếm của Google với từ khoá thương hiệu</span></p>
               <div class="project-card__actions">
                 <span class="timeline__duration">7/2025 — 10/2025</span>
                 <a href="https://sites.google.com/view/matkinheyedia?fbclid=IwY2xjawS7HaxleHRuA2FlbQIxMABicmlkETFQSDFFSUJZSGtnUGJSUEdTc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHprGm0oSwGjfBqSVABeFiguLWIzSZ0jMq7hhuBGPU1mqn2ApjWTE3ZvPDNmH_aem_JjfmTUvugh732jGzg1JUcA" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--ghost">
-                  Website <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+                  <span data-i18n="projects.website">Website</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
                 </a>
-                <a href="projects/eyedia.html" class="btn btn--sm btn--primary">
+                <a href="projects/eyedia.html" class="btn btn--sm btn--primary" data-i18n="projects.viewDetail">
                   Xem chi tiết
                 </a>
               </div>
             </div>
           </article>
 
-          
           <article class="project-card reveal" data-reveal="fade-up" data-category="website">
             <a href="projects/cozy-knit.html" class="project-card__image">
               <img src="assets/images/projects/project-2.jpg" alt="Ảnh minh hoạ website WordPress Cozy Knit" loading="lazy" width="600" height="400" />
             </a>
             <div class="project-card__body">
               <h3 class="project-card__title"><a href="projects/cozy-knit.html">Website WordPress "Cozy Knit"</a></h3>
-              <p class="project-card__desc">Xây dựng và quản trị website bằng WordPress, tối ưu tốc độ tải trang.</p>
+              <p class="project-card__desc" data-i18n="proj.cozyknit.desc">Xây dựng và quản trị website bằng WordPress, tối ưu tốc độ tải trang.</p>
               <div class="project-card__tags">
                 <span class="tag">WordPress</span><span class="tag">Website</span>
               </div>
-              <p class="project-card__result"><strong>Kết quả:</strong> Website hoạt động ổn định, tốc độ tải trang được tối ưu</p>
+              <p class="project-card__result"><strong data-i18n="projects.result">Kết quả</strong>: <span data-i18n="proj.cozyknit.result">Website hoạt động ổn định, tốc độ tải trang được tối ưu</span></p>
               <div class="project-card__actions">
                 <span class="timeline__duration">4/2025 — 6/2025</span>
                 <a href="https://cozyknit7.wordpress.com/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--ghost">
-                  Website <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+                  <span data-i18n="projects.website">Website</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
                 </a>
-                <a href="projects/cozy-knit.html" class="btn btn--sm btn--primary">
+                <a href="projects/cozy-knit.html" class="btn btn--sm btn--primary" data-i18n="projects.viewDetail">
                   Xem chi tiết
                 </a>
               </div>
@@ -475,8 +496,8 @@
       <div class="section-blob section-blob--primary" style="top:-100px; right:-80px;" aria-hidden="true"></div>
       <div class="section-blob section-blob--accent" style="bottom:-100px; left:-80px;" aria-hidden="true"></div>
       <div class="container">
-        <p class="section-tag reveal" data-reveal="fade-up">Chứng chỉ</p>
-        <h2 class="section-title reveal" data-reveal="fade-up">Certificates</h2>
+        <p class="section-tag reveal" data-reveal="fade-up" data-i18n="certificates.tag">Chứng chỉ</p>
+        <h2 class="section-title reveal" data-reveal="fade-up" data-i18n="certificates.title">Certificates</h2>
 
         <div class="certificates__grid">
           <div class="cert-card reveal" data-reveal="fade-up" data-reveal-delay="1">
@@ -504,9 +525,9 @@
   <footer class="footer" id="contact">
     <div class="container">
       <div class="footer__cta">
-        <p class="section-tag reveal" data-reveal="fade-up">Liên hệ</p>
-        <h2 class="footer__cta-title reveal" data-reveal="fade-up">Let's Create Something Together</h2>
-        <p class="footer__cta-lead reveal" data-reveal="fade-up">
+        <p class="section-tag reveal" data-reveal="fade-up" data-i18n="footer.tag">Liên hệ</p>
+        <h2 class="footer__cta-title reveal" data-reveal="fade-up" data-i18n="footer.ctaTitle">Let's Create Something Together</h2>
+        <p class="footer__cta-lead reveal" data-reveal="fade-up" data-i18n="footer.ctaLead">
           Whether it's AI, content strategy, or creative technology, I'm always excited to collaborate on meaningful projects.
         </p>
 
@@ -524,27 +545,34 @@
 
         <div class="footer__cta-actions reveal" data-reveal="fade-up">
           <a href="mailto:dinhtonhu62@gmail.com" class="btn btn--primary">
-            <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-mail"></use></svg> Send Email
+            <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-mail"></use></svg> <span data-i18n="footer.sendEmail">Send Email</span>
           </a>
           <a href="assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--outline">
-            <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-download"></use></svg> Download CV
+            <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-download"></use></svg> <span data-i18n="nav.downloadCV">Download CV</span>
           </a>
         </div>
       </div>
 
       <p class="footer__status">
         <span class="footer__status-dot" aria-hidden="true"></span>
-        Currently open to AI, Creative Technology, and Digital Marketing opportunities.
+        <span data-i18n="footer.status">Currently open to AI, Creative Technology, and Digital Marketing opportunities.</span>
       </p>
       <div class="footer__inner">
-        <p>&copy; <span id="year"></span> Đinh Thị Tố Như. All rights reserved.</p>
-        <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
-          <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
-        </button>
+        <p>&copy; <span id="year"></span> Đinh Thị Tố Như. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        <div style="display:flex; align-items:center; gap:16px;">
+          <div class="lang-toggle" role="group" aria-label="Chọn ngôn ngữ / Choose language">
+            <button type="button" class="lang-toggle__option is-active" data-lang="vi">VI</button>
+            <button type="button" class="lang-toggle__option" data-lang="en">EN</button>
+          </div>
+          <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
+            <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
+          </button>
+        </div>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js" defer></script>
   <script src="js/script.js" defer></script>
 </body>
 </html>

@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMediaGallery();
   initPromptCopy();
   initKeywordCarousel();
+  initExpSlider();
   document.getElementById("year").textContent = new Date().getFullYear();
 });
 
@@ -395,4 +396,79 @@ function initKeywordCarousel() {
 
     show(0);
   });
+}
+
+/* ---------- Slider ngang cho Kinh nghiệm (vuốt tay + mũi tên + chấm) ---------- */
+function initExpSlider() {
+  const slider = document.querySelector(".exp-slider");
+  if (!slider) return;
+
+  const track = slider.querySelector(".exp-slider__track");
+  const cards = track.querySelectorAll(".exp-card");
+  const dotsWrap = slider.querySelector(".exp-slider__dots");
+  const prevBtn = slider.querySelector(".exp-slider__arrow--prev");
+  const nextBtn = slider.querySelector(".exp-slider__arrow--next");
+  const total = cards.length;
+  if (!total) return;
+
+  let index = 0;
+
+  function update() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dotsWrap.querySelectorAll(".exp-slider__dot").forEach((dot, i) => dot.classList.toggle("is-active", i === index));
+  }
+
+  function goTo(i) {
+    index = (i + total) % total;
+    update();
+  }
+
+  if (prevBtn) prevBtn.addEventListener("click", () => goTo(index - 1));
+  if (nextBtn) nextBtn.addEventListener("click", () => goTo(index + 1));
+
+  dotsWrap.innerHTML = "";
+  cards.forEach((_, i) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "exp-slider__dot" + (i === 0 ? " is-active" : "");
+    dot.setAttribute("aria-label", `Kinh nghiệm ${i + 1}`);
+    dot.addEventListener("click", () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  /* Vuốt tay trên thiết bị cảm ứng */
+  let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
+
+  function onStart(x) {
+    isDragging = true;
+    startX = x;
+    currentX = x;
+    track.classList.add("is-dragging");
+  }
+
+  function onMove(x) {
+    if (!isDragging) return;
+    currentX = x;
+    const delta = currentX - startX;
+    track.style.transform = `translateX(calc(-${index * 100}% + ${delta}px))`;
+  }
+
+  function onEnd() {
+    if (!isDragging) return;
+    isDragging = false;
+    track.classList.remove("is-dragging");
+    const delta = currentX - startX;
+    const threshold = 60;
+    if (delta > threshold) goTo(index - 1);
+    else if (delta < -threshold) goTo(index + 1);
+    else update();
+  }
+
+  track.addEventListener("touchstart", (e) => onStart(e.touches[0].clientX), { passive: true });
+  track.addEventListener("touchmove", (e) => onMove(e.touches[0].clientX), { passive: true });
+  track.addEventListener("touchend", onEnd);
+
+  update();
 }

@@ -52,14 +52,18 @@
 
       <nav class="navbar__nav" id="navMenu" aria-label="Menu chính">
         <ul class="navbar__list">
-          <li><a href="../index.html#home" class="navbar__link" data-nav>Trang chủ</a></li>
-          <li><a href="../index.html#experience" class="navbar__link" data-nav>Kinh nghiệm</a></li>
-          <li><a href="../index.html#contact" class="navbar__link" data-nav>Liên hệ</a></li>
+          <li><a href="../index.html#home" class="navbar__link" data-nav data-i18n="nav.home">Trang chủ</a></li>
+          <li><a href="../index.html#experience" class="navbar__link" data-nav data-i18n="nav.experience">Kinh nghiệm</a></li>
+          <li><a href="../index.html#contact" class="navbar__link" data-nav data-i18n="nav.contact">Liên hệ</a></li>
         </ul>
       </nav>
 
       <div class="navbar__actions">
-        <a href="../assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--primary btn--sm">Download CV</a>
+        <div class="lang-toggle" role="group" aria-label="Chọn ngôn ngữ / Choose language">
+          <button type="button" class="lang-toggle__option is-active" data-lang="vi">VI</button>
+          <button type="button" class="lang-toggle__option" data-lang="en">EN</button>
+        </div>
+        <a href="../assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--primary btn--sm" data-i18n="nav.downloadCV">Download CV</a>
         <button class="navbar__toggle" id="navToggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="navMenu">
           <svg class="icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
         </button>
@@ -74,14 +78,14 @@
       <div class="container">
         <a href="../index.html#experience" class="btn btn--outline btn--sm experience-hero__back">
           <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-          Quay lại kinh nghiệm làm việc
+          <span data-i18n="nav.backToExperience">Quay lại kinh nghiệm làm việc</span>
         </a>
-        <p class="section-tag">Kinh nghiệm</p>
-        <h1 class="section-title">Chăm sóc khách hàng Part-time</h1>
+        <p class="section-tag" data-i18n="expdetail.tag">Kinh nghiệm</p>
+        <h1 class="section-title" data-i18n="exp.care.role">Chăm sóc khách hàng Part-time</h1>
         <p class="experience-hero__company">Anya Store</p>
         <div class="experience-hero__meta">
           <span class="timeline__duration">12/2023 — 12/2024</span>
-          <span class="tag">Chăm sóc khách hàng</span>
+          <span class="tag" data-i18n="care.tagLabel">Chăm sóc khách hàng</span>
           <span class="tag">TikTok Shop</span>
         </div>
       </div>
@@ -90,27 +94,27 @@
     <!-- ============ EXPERIENCE DETAIL ============ -->
     <section class="experience-detail">
       <div class="container experience-detail__content">
-        <h2>Mô tả công việc</h2>
-        <p>
+        <h2 data-i18n="expdetail.jobDesc">Mô tả công việc</h2>
+        <p data-i18n="care.jobDesc">
           Trong vai trò chăm sóc khách hàng tại Anya Store, tôi theo dõi hiệu suất bán hàng trên TikTok Shop, tư vấn
           và hỗ trợ khách hàng nhằm tối ưu tỷ lệ chuyển đổi, đồng thời phối hợp chặt chẽ với bộ phận Content và
           Livestream.
         </p>
 
-        <h2>Công việc thực hiện</h2>
+        <h2 data-i18n="expdetail.workDone">Công việc thực hiện</h2>
         <ul>
-          <li>Theo dõi hiệu suất bán hàng trên TikTok Shop</li>
-          <li>Phân tích phản hồi khách hàng để đề xuất cải thiện nội dung và sản phẩm</li>
-          <li>Hỗ trợ tối ưu tỷ lệ chuyển đổi thông qua tư vấn khách hàng</li>
-          <li>Phối hợp với bộ phận Content và Livestream</li>
+          <li data-i18n="care.li1">Theo dõi hiệu suất bán hàng trên TikTok Shop</li>
+          <li data-i18n="care.li2">Phân tích phản hồi khách hàng để đề xuất cải thiện nội dung và sản phẩm</li>
+          <li data-i18n="care.li3">Hỗ trợ tối ưu tỷ lệ chuyển đổi thông qua tư vấn khách hàng</li>
+          <li data-i18n="care.li4">Phối hợp với bộ phận Content và Livestream</li>
         </ul>
 
         <div class="experience-detail__nav">
           <a href="anya-content-creator.html" class="btn btn--ghost btn--sm">
-            <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> Kinh nghiệm trước
+            <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> <span data-i18n="expdetail.prevExperience">Kinh nghiệm trước</span>
           </a>
           <a href="huseco-marketing-intern.html" class="btn btn--primary btn--sm">
-            Kinh nghiệm tiếp theo <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+            <span data-i18n="expdetail.nextExperience">Kinh nghiệm tiếp theo</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
           </a>
         </div>
       </div>
@@ -121,13 +125,14 @@
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p>&copy; <span id="year"></span> Đinh Thị Tố Như. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> Đinh Thị Tố Như. <span data-i18n="footer.rights">All rights reserved.</span></p>
       <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
         <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
       </button>
     </div>
   </footer>
 
+  <script src="../js/i18n.js" defer></script>
   <script src="../js/script.js" defer></script>
 </body>
 </html>

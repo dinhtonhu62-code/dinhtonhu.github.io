@@ -52,14 +52,18 @@
 
       <nav class="navbar__nav" id="navMenu" aria-label="Menu chính">
         <ul class="navbar__list">
-          <li><a href="../index.html#home" class="navbar__link" data-nav>Trang chủ</a></li>
-          <li><a href="../index.html#projects" class="navbar__link" data-nav>Dự án</a></li>
-          <li><a href="../index.html#contact" class="navbar__link" data-nav>Liên hệ</a></li>
+          <li><a href="../index.html#home" class="navbar__link" data-nav data-i18n="nav.home">Trang chủ</a></li>
+          <li><a href="../index.html#projects" class="navbar__link" data-nav data-i18n="nav.projects">Dự án</a></li>
+          <li><a href="../index.html#contact" class="navbar__link" data-nav data-i18n="nav.contact">Liên hệ</a></li>
         </ul>
       </nav>
 
       <div class="navbar__actions">
-        <a href="../assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--primary btn--sm">Download CV</a>
+        <div class="lang-toggle" role="group" aria-label="Chọn ngôn ngữ / Choose language">
+          <button type="button" class="lang-toggle__option is-active" data-lang="vi">VI</button>
+          <button type="button" class="lang-toggle__option" data-lang="en">EN</button>
+        </div>
+        <a href="../assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--primary btn--sm" data-i18n="nav.downloadCV">Download CV</a>
         <button class="navbar__toggle" id="navToggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="navMenu">
           <svg class="icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
         </button>
@@ -74,17 +78,17 @@
       <div class="container">
         <a href="../index.html#projects" class="btn btn--outline btn--sm project-hero__back">
           <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-          Quay lại danh sách dự án
+          <span data-i18n="nav.backToProjects">Quay lại danh sách dự án</span>
         </a>
-        <p class="section-tag">Dự án</p>
+        <p class="section-tag" data-i18n="projdetail.tag">Dự án</p>
         <h1 class="section-title">Website WordPress "Cozy Knit"</h1>
         <div class="project-hero__meta">
           <span class="timeline__duration">4/2025 — 6/2025</span>
           <span class="tag">WordPress</span>
-          <span class="tag">Website</span>
+          <span class="tag" data-i18n="projects.website">Website</span>
         </div>
         <a href="https://cozyknit7.wordpress.com/" target="_blank" rel="noopener noreferrer" class="btn btn--primary project-hero__link">
-          Xem website <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+          <span data-i18n="projdetail.viewWebsite">Xem website</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
         </a>
       </div>
     </section>
@@ -97,29 +101,29 @@
         </div>
 
         <div class="project-detail__content">
-          <h2>Tổng quan dự án</h2>
-          <p>
+          <h2 data-i18n="projdetail.overview">Tổng quan dự án</h2>
+          <p data-i18n="cozyknit.overview">
             Cozy Knit là thương hiệu len đan thủ công với slogan "Ấm áp trong từng sợi len". Tôi phụ trách xây dựng
             và quản trị toàn bộ website bằng WordPress, đảm bảo giao diện mượt mà và tốc độ tải trang được tối ưu
             cho trải nghiệm mua sắm của khách hàng.
           </p>
 
-          <h2>Công việc thực hiện</h2>
+          <h2 data-i18n="projdetail.workDone">Công việc thực hiện</h2>
           <ul>
-            <li>Xây dựng và quản trị website bằng WordPress</li>
-            <li>Tối ưu tốc độ tải trang</li>
+            <li data-i18n="cozyknit.li1">Xây dựng và quản trị website bằng WordPress</li>
+            <li data-i18n="cozyknit.li2">Tối ưu tốc độ tải trang</li>
           </ul>
 
-          <h2>Kết quả đạt được</h2>
+          <h2 data-i18n="projdetail.result">Kết quả đạt được</h2>
           <div class="project-detail__result">
-            <p><strong>Kết quả:</strong> Website hoạt động ổn định, tốc độ tải trang được tối ưu.</p>
+            <p><strong data-i18n="projects.result">Kết quả:</strong> <span data-i18n="cozyknit.result">Website hoạt động ổn định, tốc độ tải trang được tối ưu.</span></p>
           </div>
 
           <div class="project-detail__nav">
             <a href="eyedia.html" class="btn btn--ghost btn--sm">
-              <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> Dự án trước
+              <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> <span data-i18n="projdetail.prevProject">Dự án trước</span>
             </a>
-            <a href="../index.html#projects" class="btn btn--primary btn--sm">Tất cả dự án</a>
+            <a href="../index.html#projects" class="btn btn--primary btn--sm" data-i18n="projdetail.allProjects">Tất cả dự án</a>
           </div>
         </div>
       </div>
@@ -130,13 +134,14 @@
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p>&copy; <span id="year"></span> Đinh Thị Tố Như. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> Đinh Thị Tố Như. <span data-i18n="footer.rights">All rights reserved.</span></p>
       <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
         <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
       </button>
     </div>
   </footer>
 
+  <script src="../js/i18n.js" defer></script>
   <script src="../js/script.js" defer></script>
 </body>
 </html>

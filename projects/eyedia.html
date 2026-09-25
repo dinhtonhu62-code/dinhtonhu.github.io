@@ -53,14 +53,18 @@
 
       <nav class="navbar__nav" id="navMenu" aria-label="Menu chính">
         <ul class="navbar__list">
-          <li><a href="../index.html#home" class="navbar__link" data-nav>Trang chủ</a></li>
-          <li><a href="../index.html#projects" class="navbar__link" data-nav>Dự án</a></li>
-          <li><a href="../index.html#contact" class="navbar__link" data-nav>Liên hệ</a></li>
+          <li><a href="../index.html#home" class="navbar__link" data-nav data-i18n="nav.home">Trang chủ</a></li>
+          <li><a href="../index.html#projects" class="navbar__link" data-nav data-i18n="nav.projects">Dự án</a></li>
+          <li><a href="../index.html#contact" class="navbar__link" data-nav data-i18n="nav.contact">Liên hệ</a></li>
         </ul>
       </nav>
 
       <div class="navbar__actions">
-        <a href="../assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--primary btn--sm">Download CV</a>
+        <div class="lang-toggle" role="group" aria-label="Chọn ngôn ngữ / Choose language">
+          <button type="button" class="lang-toggle__option is-active" data-lang="vi">VI</button>
+          <button type="button" class="lang-toggle__option" data-lang="en">EN</button>
+        </div>
+        <a href="../assets/cv/CV.pdf" download="Dinh-Thi-To-Nhu-CV.pdf" class="btn btn--primary btn--sm" data-i18n="nav.downloadCV">Download CV</a>
         <button class="navbar__toggle" id="navToggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="navMenu">
           <svg class="icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
         </button>
@@ -75,9 +79,9 @@
       <div class="container">
         <a href="../index.html#projects" class="btn btn--outline btn--sm project-hero__back">
           <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-          Quay lại danh sách dự án
+          <span data-i18n="nav.backToProjects">Quay lại danh sách dự án</span>
         </a>
-        <p class="section-tag">Dự án</p>
+        <p class="section-tag" data-i18n="projdetail.tag">Dự án</p>
         <h1 class="section-title">SEO Website Mắt Kính Eyedia</h1>
         <div class="project-hero__meta">
           <span class="timeline__duration">7/2025 — 10/2025</span>
@@ -86,7 +90,7 @@
           <span class="tag">Social Entity</span>
         </div>
         <a href="https://sites.google.com/view/matkinheyedia?fbclid=IwY2xjawS7HaxleHRuA2FlbQIxMABicmlkETFQSDFFSUJZSGtnUGJSUEdTc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHprGm0oSwGjfBqSVABeFiguLWIzSZ0jMq7hhuBGPU1mqn2ApjWTE3ZvPDNmH_aem_JjfmTUvugh732jGzg1JUcA" target="_blank" rel="noopener noreferrer" class="btn btn--primary project-hero__link">
-          Xem website <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+          <span data-i18n="projdetail.viewWebsite">Xem website</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
         </a>
       </div>
     </section>
@@ -99,28 +103,28 @@
         </div>
 
         <div class="project-detail__content">
-          <h2>Tổng quan dự án</h2>
-          <p>
+          <h2 data-i18n="projdetail.overview">Tổng quan dự án</h2>
+          <p data-i18n="eyedia.overview">
             Eyedia là thương hiệu kính mắt phong cách Y2K chuẩn bị ra mắt fanpage và website bán hàng. Trong dự án
             này, tôi phụ trách mảng SEO On-page: nghiên cứu bộ từ khoá ngành hàng, tối ưu nội dung cho toàn bộ hệ
             thống bài viết và xây dựng nền tảng nhận diện thương hiệu trên mạng xã hội để hỗ trợ SEO tổng thể.
           </p>
 
-          <h2>Công việc thực hiện</h2>
-          <ul> 
-            <li>Thiết kế website trên Google Site</li>
-            <li>Nghiên cứu bộ từ khoá ngành "mắt kính"</li>
-            <li>Tối ưu SEO On-page cho 40+ bài viết</li>
-            <li>Tối ưu Title, Meta Description, Heading</li>
-            <li>Xây dựng Social Entity trên Facebook và TikTok</li>
+          <h2 data-i18n="projdetail.workDone">Công việc thực hiện</h2>
+          <ul>
+            <li data-i18n="eyedia.li1">Thiết kế website trên Google Site</li>
+            <li data-i18n="eyedia.li2">Nghiên cứu bộ từ khoá ngành "mắt kính"</li>
+            <li data-i18n="eyedia.li3">Tối ưu SEO On-page cho 40+ bài viết</li>
+            <li data-i18n="eyedia.li4">Tối ưu Title, Meta Description, Heading</li>
+            <li data-i18n="eyedia.li5">Xây dựng Social Entity trên Facebook và TikTok</li>
           </ul>
 
-          <h2>Kết quả đạt được</h2>
+          <h2 data-i18n="projdetail.result">Kết quả đạt được</h2>
           <div class="project-detail__result">
-            <p><strong>Kết quả:</strong> Tối ưu nội dung giúp bài viết Facebook nằm trong Top tìm kiếm Google với từ khoá thương hiệu.</p>
+            <p><strong data-i18n="projects.result">Kết quả:</strong> <span data-i18n="eyedia.result">Tối ưu nội dung giúp bài viết Facebook nằm trong Top tìm kiếm Google với từ khoá thương hiệu.</span></p>
           </div>
 
-          <h2>Hình ảnh thực tế</h2>
+          <h2 data-i18n="projdetail.gallery">Hình ảnh thực tế</h2>
           <div class="media-gallery">
             <button type="button" class="media-gallery__item reveal" data-reveal="fade-up" data-reveal-delay="1">
               <img src="../assets/images/projects/project-7.jpg" alt="Banner quảng cáo Eyedia: Thời trang - Sức khoẻ song hành" loading="lazy" />
@@ -150,10 +154,10 @@
 
           <div class="project-detail__nav">
             <a href="ai-assisted-website-development.html" class="btn btn--ghost btn--sm">
-              <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> Dự án trước
+              <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> <span data-i18n="projdetail.prevProject">Dự án trước</span>
             </a>
             <a href="cozy-knit.html" class="btn btn--primary btn--sm">
-              Dự án tiếp theo <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
+              <span data-i18n="projdetail.nextProject">Dự án tiếp theo</span> <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-external-link"></use></svg>
             </a>
           </div>
         </div>
@@ -173,13 +177,14 @@
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p>&copy; <span id="year"></span> Đinh Thị Tố Như. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> Đinh Thị Tố Như. <span data-i18n="footer.rights">All rights reserved.</span></p>
       <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
         <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
       </button>
     </div>
   </footer>
 
+  <script src="../js/i18n.js" defer></script>
   <script src="../js/script.js" defer></script>
 </body>
 </html>
