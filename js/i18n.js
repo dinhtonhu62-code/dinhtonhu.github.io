@@ -24,8 +24,8 @@ const I18N = {
   "hero.role.content": { vi: "Content Creator", en: "Content Creator" },
   "hero.role.seo": { vi: "SEO On-page", en: "SEO On-page" },
   "hero.bio": {
-    vi: "Sinh viên ngành Marketing tại Đại học Nguyễn Tất Thành với kinh nghiệm thực tế qua các vị trí Content Creator, chăm sóc khách hàng và thực tập Marketing. Thành thạo sản xuất nội dung TikTok, chạy quảng cáo Facebook/Meta Ads, tối ưu SEO On-page.",
-    en: "Marketing student at Nguyen Tat Thanh University with hands-on experience as a Content Creator, customer care associate and Marketing intern. Skilled in producing TikTok content, running Facebook/Meta Ads, and On-page SEO optimization."
+    vi: "Cử nhân ngành Marketing tại Đại học Nguyễn Tất Thành với kinh nghiệm thực tế qua các vị trí Content Creator, chăm sóc khách hàng và Marketing Executive. Thành thạo sản xuất nội dung TikTok, chạy quảng cáo Facebook/Meta Ads, tối ưu SEO On-page.",
+    en: "Marketing graduate from Nguyen Tat Thanh University with hands-on experience as a Content Creator, customer care associate, and Marketing Executive. Skilled in producing TikTok content, running Facebook/Meta Ads, and On-page SEO optimization."
   },
   "hero.viewProjects": { vi: "Xem Dự Án", en: "View Projects" },
   "hero.scrollHint": { vi: "Cuộn xuống", en: "Scroll down" },
@@ -34,11 +34,11 @@ const I18N = {
   "about.tag": { vi: "Giới thiệu", en: "About" },
   "about.title": { vi: "Về Tôi", en: "About Me" },
   "about.desc": {
-    vi: "Tôi là sinh viên ngành Marketing, yêu thích Content Marketing, TikTok và SEO On-page. Qua các vị trí thực tập và part-time, tôi đã tích lũy kinh nghiệm lên kế hoạch nội dung, chạy quảng cáo Facebook/Meta Ads và tối ưu SEO cho website. Mục tiêu ngắn hạn của tôi là hoàn thiện đầy đủ các kỹ năng cần thiết để trở thành nhân sự đóng góp giá trị, và trong 5 năm tới đảm nhận vai trò lãnh đạo, quản lý các chiến dịch marketing quy mô lớn.",
-    en: "I'm a Marketing student passionate about Content Marketing, TikTok and On-page SEO. Through internships and part-time roles, I've built experience planning content, running Facebook/Meta Ads and optimizing website SEO. My short-term goal is to master the skills needed to become a valuable contributor, and within 5 years take on a leadership role managing large-scale marketing campaigns."
+    vi: "Tôi là Cử nhân Marketing, yêu thích Content Marketing, TikTok và SEO On-page. Qua các vị trí thực tập, part-time và full-time, tôi đã tích lũy kinh nghiệm lên kế hoạch nội dung, chạy quảng cáo Facebook/Meta Ads và tối ưu SEO cho website. Mục tiêu ngắn hạn của tôi là hoàn thiện đầy đủ các kỹ năng cần thiết để trở thành nhân sự đóng góp giá trị, và trong 5 năm tới đảm nhận vai trò lãnh đạo, quản lý các chiến dịch marketing quy mô lớn.",
+    en: "I'm a Marketing graduate passionate about Content Marketing, TikTok and On-page SEO. Through internship, part-time and full-time roles, I've built experience planning content, running Facebook/Meta Ads and optimizing website SEO. My short-term goal is to master the skills needed to become a valuable contributor, and within 5 years take on a leadership role managing large-scale marketing campaigns."
   },
   "about.education.title": { vi: "Học vấn", en: "Education" },
-  "about.education.text": { vi: "Marketing (GPA 3.3/4.0)<br />Đại học Nguyễn Tất Thành", en: "Marketing (GPA 3.3/4.0)<br />Nguyen Tat Thanh University" },
+  "about.education.text": { vi: "Cử nhân Marketing<br />Tốt nghiệp 2025 &middot; GPA 3.3/4.0", en: "B.A. in Marketing<br />Graduated 2025 &middot; GPA 3.3/4.0" },
   "about.experience.title": { vi: "Kinh nghiệm", en: "Experience" },
   "about.experience.text": { vi: "2023 — Nay<br />Marketing &amp; Content", en: "2023 — Present<br />Marketing &amp; Content" },
   "about.goal.title": { vi: "Mục tiêu nghề nghiệp", en: "Career Goal" },
