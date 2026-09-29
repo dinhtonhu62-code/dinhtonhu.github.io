@@ -2677,6 +2677,16 @@ a.footer__info-item:hover {
   max-width: 100%;
 }
 
+.viz-section img.is-zoomable {
+  cursor: zoom-in;
+  transition: filter 0.25s ease, box-shadow 0.25s ease;
+}
+
+.viz-section img.is-zoomable:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 0 0 3px rgba(30, 155, 215, 0.35);
+}
+
 .viz-images--pair {
   grid-template-columns: repeat(2, 1fr);
 }

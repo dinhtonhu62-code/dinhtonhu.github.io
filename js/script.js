@@ -311,8 +311,9 @@ function initParallax() {
 /* ---------- Thư viện ảnh: bấm vào ảnh để xem phóng to (lightbox) ---------- */
 function initMediaGallery() {
   const items = document.querySelectorAll(".media-gallery__item");
+  const zoomableImages = document.querySelectorAll(".viz-section img");
   const lightbox = document.getElementById("lightbox");
-  if (!items.length || !lightbox) return;
+  if ((!items.length && !zoomableImages.length) || !lightbox) return;
 
   const lightboxImg = document.getElementById("lightboxImg");
   const closeBtn = document.getElementById("lightboxClose");
@@ -334,6 +335,11 @@ function initMediaGallery() {
       const img = item.querySelector("img");
       open(img.src, img.alt);
     });
+  });
+
+  zoomableImages.forEach((img) => {
+    img.classList.add("is-zoomable");
+    img.addEventListener("click", () => open(img.src, img.alt));
   });
 
   closeBtn.addEventListener("click", close);
