@@ -179,9 +179,24 @@ const I18N = {
   "sonha.g2.eyebrow": { vi: "02. Keyword & Page Optimization", en: "02. Keyword & Page Optimization" },
   "sonha.g2.title": { vi: "Keyword Research & On-page SEO", en: "Keyword Research & On-page SEO" },
   "sonha.g2.desc": { vi: "Conducted keyword research, competitor analysis and on-page optimization to identify content opportunities and improve organic search visibility.", en: "Conducted keyword research, competitor analysis and on-page optimization to identify content opportunities and improve organic search visibility." },
-  "sonha.g2.img1": { vi: "Ảnh 1<br />Keyword Gap / Competitor Analysis", en: "Image 1<br />Keyword Gap / Competitor Analysis" },
-  "sonha.g2.img2": { vi: "Ảnh 2<br />Google Search Console – Pages", en: "Image 2<br />Google Search Console – Pages" },
-  "sonha.g2.img3": { vi: "Ảnh 3<br />Trang website / nội dung SEO đã tối ưu", en: "Image 3<br />Website page / optimized SEO content" },
+  "sonha.g2.local.img": { vi: "Ảnh 1<br />Kết quả tìm kiếm Google – từ khóa Local", en: "Image 1<br />Google search results – Local keyword" },
+  "sonha.g2.brand.img": { vi: "Ảnh 2<br />Kết quả tìm kiếm Google – từ khóa Brand", en: "Image 2<br />Google search results – Brand keyword" },
+  "sonha.g2.longtail.img": { vi: "Ảnh 3<br />Kết quả tìm kiếm Google – từ khóa Long-tail", en: "Image 3<br />Google search results – Long-tail keyword" },
+  "sonha.g2.local.caption": { vi: "local keywords", en: "local keywords" },
+  "sonha.g2.brand.caption": { vi: "brand keywords", en: "brand keywords" },
+  "sonha.g2.longtail.caption": { vi: "long-tail keywords", en: "long-tail keywords" },
+  "sonha.g2.point1": {
+    vi: "<strong>Phủ từ khóa chiến lược:</strong> Đứng Top đầu cho nhóm từ khóa Local và Brand chính, chiếm ưu thế kết quả tìm kiếm trong thị trường mục tiêu.",
+    en: "<strong>Strategic keyword coverage:</strong> Ranking at the top for core Local and Brand keywords, dominating search results in the target market."
+  },
+  "sonha.g2.point2": {
+    vi: "<strong>Tối ưu long-tail:</strong> Từ khóa \"thang máy tải hàng\" tăng 350% organic clicks (2 → 9), thể hiện khả năng nắm bắt đúng search intent.",
+    en: "<strong>Long-tail optimization:</strong> The \"cargo elevator\" keyword grew organic clicks by 350% (2 → 9), showing a strong grasp of search intent."
+  },
+  "sonha.g2.point3": {
+    vi: "<strong>Traffic chất lượng:</strong> Thu hút đúng lượng truy cập organic mục tiêu, xây dựng uy tín thương hiệu với cả khách hàng mới và cũ.",
+    en: "<strong>Quality traffic:</strong> Driven highly targeted organic traffic, building brand authority with both new and existing customers."
+  },
   "sonha.g3.eyebrow": { vi: "03. SEO Case Study", en: "03. SEO Case Study" },
   "sonha.g3.title": { vi: "Keyword Growth", en: "Keyword Growth" },
   "sonha.g3.desc": { vi: "Optimized SEO content and website pages around elevator-related search intent and monitored performance through Google Search Console.", en: "Optimized SEO content and website pages around elevator-related search intent and monitored performance through Google Search Console." },

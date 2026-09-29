@@ -2723,6 +2723,93 @@ a.footer__info-item:hover {
   color: var(--color-text-muted);
 }
 
+/* ---- Browser mockup (SERP / keyword ranking showcase) ---- */
+.viz-images--triple {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.browser-mock {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.browser-mock__bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 26px;
+  padding: 0 10px;
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.browser-mock__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-border);
+}
+
+.browser-mock__dot--red { background: #ff5f57; }
+.browser-mock__dot--yellow { background: #ffbd2e; }
+.browser-mock__dot--green { background: #28c840; }
+
+.browser-mock__body .viz-placeholder {
+  aspect-ratio: 4 / 3;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+}
+
+.browser-mock__body img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.browser-caption {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.viz-points {
+  list-style: none;
+  margin: 4px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 720px;
+}
+
+.viz-points li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.viz-points li::before {
+  content: "•";
+  color: var(--color-primary);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.viz-points strong {
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
 /* ---- Before / After compare ---- */
 .viz-compare {
   display: grid;
@@ -2947,6 +3034,7 @@ a.footer__info-item:hover {
 @media (max-width: 700px) {
   .viz-images--pair,
   .viz-images--feature,
+  .viz-images--triple,
   .viz-compare,
   .viz-social-stats {
     grid-template-columns: 1fr;
