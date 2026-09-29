@@ -3031,12 +3031,17 @@ a.footer__info-item:hover {
   margin-top: 6px;
 }
 
+.viz-social-stats--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 @media (max-width: 700px) {
   .viz-images--pair,
   .viz-images--feature,
   .viz-images--triple,
   .viz-compare,
-  .viz-social-stats {
+  .viz-social-stats,
+  .viz-social-stats--4 {
     grid-template-columns: 1fr;
   }
 

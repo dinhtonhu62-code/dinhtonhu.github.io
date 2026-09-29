@@ -66,11 +66,11 @@ const I18N = {
   "experience.type.internship": { vi: "Thực tập", en: "Internship" },
 
   "exp.sonha.role": { vi: "Marketing Executive", en: "Marketing Executive" },
-  "exp.sonha.li1": { vi: "Triển khai SEO website: keyword research, Keyword Gap, On-page SEO, content optimization và internal linking; theo dõi hiệu suất bằng Google Search Console và các công cụ SEO.", en: "Implemented website SEO: keyword research, Keyword Gap analysis, on-page SEO, content optimization and internal linking; tracked performance with Google Search Console and other SEO tools." },
+  "exp.sonha.li1": { vi: "Độc lập triển khai SEO On-page cho 2 website của công ty (Sơn Hà Elevator và Kori): keyword research, Keyword Gap, tối ưu nội dung và internal linking bằng Google Search Console và SEMrush; trong 2 tháng đã triển khai và tối ưu hơn 30 bài viết.", en: "Independently implemented On-page SEO for the company's two websites (Son Ha Elevator and Kori): keyword research, Keyword Gap analysis, content optimization and internal linking using Google Search Console and SEMrush; delivered and optimized 30+ articles within 2 months." },
   "exp.sonha.li2": { vi: "Tối ưu nội dung và landing page, góp phần tăng 14,1% organic clicks trung bình/ngày và cải thiện CTR từ 1,9% lên 2,9% trong 50 ngày so với giai đoạn 50 ngày trước đó.", en: "Optimized content and landing pages, contributing to a 14.1% increase in average daily organic clicks and improving CTR from 1.9% to 2.9% over 50 days compared to the prior 50-day period." },
   "exp.sonha.li3": { vi: "Tối ưu nhóm từ khóa ngành thang máy; từ khóa \"thang máy tải hàng\" tăng 350% organic clicks (2 → 9) và cải thiện vị trí trung bình 7,5 → 6,5.", en: "Optimized elevator-industry keyword clusters; the keyword \"cargo elevator\" grew organic clicks by 350% (2 → 9) and improved average ranking position from 7.5 to 6.5." },
   "exp.sonha.li4": { vi: "Xây dựng và tối ưu nội dung SEO cho trang sản phẩm, dịch vụ và bài viết website; theo dõi Clicks, Impressions, CTR và Ranking để đánh giá hiệu quả.", en: "Built and optimized SEO content for product, service and blog pages; tracked Clicks, Impressions, CTR and Ranking to evaluate effectiveness." },
-  "exp.sonha.li5": { vi: "Hỗ trợ triển khai nội dung Facebook và theo dõi hiệu suất, với 25,3K views (+163,3%), 399 link clicks (+204,6%) và 77 interactions (+54%) trong kỳ báo cáo.", en: "Supported Facebook content execution and performance tracking, with 25.3K views (+163.3%), 399 link clicks (+204.6%) and 77 interactions (+54%) during the reporting period." },
+  "exp.sonha.li5": { vi: "Sản xuất và đăng nội dung Facebook (ảnh, video) với tần suất 3–4 bài/tuần; chạy quảng cáo Facebook Ads và theo dõi hiệu suất, đạt 25,3K views (+136,3%), 399 link clicks (+204,6%) và 77 interactions (+54%) trong kỳ báo cáo.", en: "Produced and published Facebook content (images, videos) at a pace of 3–4 posts/week; ran Facebook Ads and tracked performance, reaching 25.3K views (+136.3%), 399 link clicks (+204.6%) and 77 interactions (+54%) during the reporting period." },
 
   "exp.cc.role": { vi: "Content Creator Part-time", en: "Content Creator (Part-time)" },
   "exp.cc.li1": { vi: "Nghiên cứu xu hướng TikTok và xây dựng kế hoạch nội dung, sản xuất 10–15 video/tháng, có video đạt hơn 10.000 lượt xem tự nhiên.", en: "Researched TikTok trends and built content plans, producing 10–15 videos/month, with some videos reaching over 10,000 organic views." },
@@ -166,19 +166,18 @@ const I18N = {
   "sonha.result2": { vi: "CTR tăng từ 1,9% lên 2,9% trong 50 ngày", en: "CTR increased from 1.9% to 2.9% within 50 days" },
   "sonha.result3": { vi: "Từ khoá \"thang máy tải hàng\": +350% clicks (2 → 9)", en: "\"Cargo elevator\" keyword: +350% clicks (2 → 9)" },
   "sonha.result4": { vi: "Vị trí trung bình cải thiện 7,5 → 6,5", en: "Average ranking position improved 7.5 → 6.5" },
-  "sonha.result5": { vi: "Facebook: 25,3K views (+163,3%)", en: "Facebook: 25.3K views (+163.3%)" },
+  "sonha.result5": { vi: "Facebook: 25,3K views (+136,3%)", en: "Facebook: 25.3K views (+136.3%)" },
   "sonha.result6": { vi: "399 link clicks (+204,6%), 77 interactions (+54%)", en: "399 link clicks (+204.6%), 77 interactions (+54%)" },
   "sonha.vizSubtitle": { vi: "SEO & Digital Marketing Performance", en: "SEO & Digital Marketing Performance" },
   "sonha.vizTitle": { vi: "Dự án thực tế", en: "Real Project" },
   "sonha.g1.eyebrow": { vi: "01. SEO Performance", en: "01. SEO Performance" },
   "sonha.g1.title": { vi: "Google Search Console", en: "Google Search Console" },
   "sonha.g1.img1": { vi: "Ảnh 1<br />Google Search Console – Performance Overview", en: "Image 1<br />Google Search Console – Performance Overview" },
-  "sonha.g1.img2": { vi: "Ảnh 2<br />Google Search Console – Search Queries", en: "Image 2<br />Google Search Console – Search Queries" },
   "sonha.g1.captionTitle": { vi: "Google Search Console", en: "Google Search Console" },
   "sonha.g1.captionDesc": { vi: "SEO performance & keyword monitoring", en: "SEO performance & keyword monitoring" },
   "sonha.g2.eyebrow": { vi: "02. Keyword & Page Optimization", en: "02. Keyword & Page Optimization" },
   "sonha.g2.title": { vi: "Keyword Research & On-page SEO", en: "Keyword Research & On-page SEO" },
-  "sonha.g2.desc": { vi: "Conducted keyword research, competitor analysis and on-page optimization to identify content opportunities and improve organic search visibility.", en: "Conducted keyword research, competitor analysis and on-page optimization to identify content opportunities and improve organic search visibility." },
+  "sonha.g2.desc": { vi: "Nghiên cứu từ khóa, phân tích đối thủ cạnh tranh và tối ưu on-page nhằm xác định cơ hội nội dung và cải thiện khả năng hiển thị tìm kiếm tự nhiên.", en: "Conducted keyword research, competitor analysis and on-page optimization to identify content opportunities and improve organic search visibility." },
   "sonha.g2.local.img": { vi: "Ảnh 1<br />Kết quả tìm kiếm Google – từ khóa Local", en: "Image 1<br />Google search results – Local keyword" },
   "sonha.g2.brand.img": { vi: "Ảnh 2<br />Kết quả tìm kiếm Google – từ khóa Brand", en: "Image 2<br />Google search results – Brand keyword" },
   "sonha.g2.longtail.img": { vi: "Ảnh 3<br />Kết quả tìm kiếm Google – từ khóa Long-tail", en: "Image 3<br />Google search results – Long-tail keyword" },
@@ -197,24 +196,51 @@ const I18N = {
     vi: "<strong>Traffic chất lượng:</strong> Thu hút đúng lượng truy cập organic mục tiêu, xây dựng uy tín thương hiệu với cả khách hàng mới và cũ.",
     en: "<strong>Quality traffic:</strong> Driven highly targeted organic traffic, building brand authority with both new and existing customers."
   },
-  "sonha.g3.eyebrow": { vi: "03. SEO Case Study", en: "03. SEO Case Study" },
+  "sonha.gAI.eyebrow": { vi: "03. SEO & AI Visibility", en: "03. SEO & AI Visibility" },
+  "sonha.gAI.title": { vi: "SEMrush Domain Overview", en: "SEMrush Domain Overview" },
+  "sonha.gAI.desc": {
+    vi: "Theo dõi sức khỏe SEO tổng thể của website qua SEMrush, đồng thời ghi nhận website được các nền tảng AI Search (ChatGPT, Google AI Overview, AI Mode, Gemini) trích dẫn nội dung — một tín hiệu SEO hiện đại cho thấy nội dung đủ chất lượng và đáng tin cậy để AI tham chiếu.",
+    en: "Tracked the website's overall SEO health via SEMrush, while also being cited by AI Search platforms (ChatGPT, Google AI Overview, AI Mode, Gemini) — a modern SEO signal showing the content is credible and trustworthy enough for AI to reference."
+  },
+  "sonha.gAI.img1": { vi: "Ảnh 1<br />SEMrush – Domain Overview &amp; AI Search Visibility", en: "Image 1<br />SEMrush – Domain Overview &amp; AI Search Visibility" },
+  "sonha.gAI.point1": {
+    vi: "<strong>Được ChatGPT trích dẫn:</strong> 1 lượt nhắc đến, 3 trang được trích dẫn làm nguồn.",
+    en: "<strong>Cited by ChatGPT:</strong> 1 mention, 3 pages cited as a source."
+  },
+  "sonha.gAI.point2": {
+    vi: "<strong>Xuất hiện trên Google AI Overview &amp; AI Mode:</strong> tổng cộng 3 trang được trích dẫn.",
+    en: "<strong>Appears in Google AI Overview &amp; AI Mode:</strong> 3 pages cited in total."
+  },
+  "sonha.gAI.point3": {
+    vi: "<strong>Được Gemini trích dẫn:</strong> 1 lượt nhắc đến, 1 trang được trích dẫn.",
+    en: "<strong>Cited by Gemini:</strong> 1 mention, 1 page cited."
+  },
+
+  "sonha.g3.eyebrow": { vi: "04. SEO Case Study", en: "04. SEO Case Study" },
   "sonha.g3.title": { vi: "Keyword Growth", en: "Keyword Growth" },
-  "sonha.g3.desc": { vi: "Optimized SEO content and website pages around elevator-related search intent and monitored performance through Google Search Console.", en: "Optimized SEO content and website pages around elevator-related search intent and monitored performance through Google Search Console." },
+  "sonha.g3.desc": { vi: "Tối ưu nội dung SEO và các trang trên website theo đúng search intent liên quan đến thang máy, đồng thời theo dõi hiệu suất qua Google Search Console.", en: "Optimized SEO content and website pages around elevator-related search intent and monitored performance through Google Search Console." },
   "sonha.kw1": { vi: "Keyword Growth — \"thang máy tải hàng\"", en: "Keyword Growth — \"cargo elevator\"" },
   "sonha.kw2": { vi: "Keyword Growth — \"thang máy gia đình\"", en: "Keyword Growth — \"home elevator\"" },
   "sonha.kw3": { vi: "Keyword Growth — \"sửa chữa thang máy\"", en: "Keyword Growth — \"elevator repair\"" },
   "sonha.kw4": { vi: "Keyword Growth — \"thang máy tải khách\"", en: "Keyword Growth — \"passenger elevator\"" },
   "sonha.kw5": { vi: "Keyword Growth — \"thang máy người khuyết tật\"", en: "Keyword Growth — \"elevator for disabled access\"" },
   "sonha.pending": { vi: "Số liệu Before/After đang được cập nhật", en: "Before/After data coming soon" },
-  "sonha.g4.eyebrow": { vi: "04. SEO Opportunity", en: "04. SEO Opportunity" },
+  "sonha.g4.eyebrow": { vi: "05. SEO Opportunity", en: "05. SEO Opportunity" },
   "sonha.g4.keyword": { vi: "Keyword: \"thang máy gia đình không phòng máy\"", en: "Keyword: \"machine-room-less home elevator\"" },
-  "sonha.g4.desc": { vi: "High search visibility with significant room for improvement in ranking and CTR, identified as an SEO content optimization opportunity.", en: "High search visibility with significant room for improvement in ranking and CTR, identified as an SEO content optimization opportunity." },
-  "sonha.g5.eyebrow": { vi: "05. Social Media", en: "05. Social Media" },
+  "sonha.g4.desc": { vi: "Mức độ hiển thị tìm kiếm cao nhưng còn nhiều dư địa cải thiện về thứ hạng và CTR — được xác định là cơ hội tối ưu nội dung SEO.", en: "High search visibility with significant room for improvement in ranking and CTR, identified as an SEO content optimization opportunity." },
+  "sonha.g4.gapIntro": {
+    vi: "Phân tích SEMrush Keyword Gap với các đối thủ cùng ngành cho thấy thêm nhiều từ khóa tiềm năng website chưa khai thác:",
+    en: "SEMrush Keyword Gap analysis against industry competitors surfaced more untapped keyword opportunities:"
+  },
+  "sonha.g4.gapImg": { vi: "Ảnh<br />SEMrush Keyword Gap – Top Opportunities", en: "Image<br />SEMrush Keyword Gap – Top Opportunities" },
+  "sonha.g4.gap1": { vi: "<strong>\"thang máy gia đình hcm\"</strong> — 18.100 lượt tìm kiếm/tháng, website chưa khai thác.", en: "<strong>\"home elevator hcm\"</strong> — 18,100 monthly searches, not yet targeted." },
+  "sonha.g4.gap2": { vi: "<strong>\"thang trục vít\"</strong> — 480 lượt tìm kiếm/tháng.", en: "<strong>\"screw elevator\"</strong> — 480 monthly searches." },
+  "sonha.g4.gap3": { vi: "<strong>\"bảng điều khiển thang máy\"</strong> — 210 lượt tìm kiếm/tháng.", en: "<strong>\"elevator control panel\"</strong> — 210 monthly searches." },
+  "sonha.g5.eyebrow": { vi: "06. Social Media", en: "06. Social Media" },
   "sonha.g5.title": { vi: "Facebook Content Performance", en: "Facebook Content Performance" },
   "sonha.g5.img1": { vi: "Ảnh 1<br />Facebook Analytics – tổng quan hiệu suất", en: "Image 1<br />Facebook Analytics – performance overview" },
   "sonha.g5.img2": { vi: "Ảnh 2<br />Facebook content / visual", en: "Image 2<br />Facebook content / visual" },
-  "sonha.g5.img3": { vi: "Ảnh 3<br />Facebook content / visual", en: "Image 3<br />Facebook content / visual" },
-  "sonha.g5.desc": { vi: "Supported Facebook content execution and performance tracking.", en: "Supported Facebook content execution and performance tracking." },
+  "sonha.g5.desc": { vi: "Hỗ trợ sản xuất nội dung Facebook và theo dõi hiệu suất, kết hợp cả tăng trưởng organic lẫn quảng cáo trả phí.", en: "Supported Facebook content execution and performance tracking, combining both organic growth and paid advertising." },
 
   /* ---- Project detail pages (dùng chung khung) ---- */
   "projdetail.tag": { vi: "Dự án", en: "Project" },
