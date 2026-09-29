@@ -193,6 +193,10 @@ const I18N = {
     vi: "<strong>Traffic chất lượng:</strong> Thu hút đúng lượng truy cập organic mục tiêu, xây dựng uy tín thương hiệu với cả khách hàng mới và cũ.",
     en: "<strong>Quality traffic:</strong> Driven highly targeted organic traffic, building brand authority with both new and existing customers."
   },
+  "sonha.g2.point4": {
+    vi: "<strong>Xuất hiện trong AI Overview:</strong> Được Google AI Overview trích dẫn trực tiếp làm nguồn cho các truy vấn liên quan (ví dụ: \"thang máy tải khách 320kg\"), củng cố thêm tín hiệu AI Visibility đã ghi nhận ở mục SEMrush phía trên.",
+    en: "<strong>Featured in AI Overview:</strong> Directly cited by Google's AI Overview as a source for related queries (e.g. \"320kg passenger elevator\"), reinforcing the AI-visibility signal already documented in the SEMrush section above."
+  },
   "sonha.gAI.eyebrow": { vi: "03. SEO & AI Visibility", en: "03. SEO & AI Visibility" },
   "sonha.gAI.title": { vi: "SEMrush Domain Overview", en: "SEMrush Domain Overview" },
   "sonha.gAI.desc": {
