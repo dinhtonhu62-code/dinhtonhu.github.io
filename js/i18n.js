@@ -391,6 +391,20 @@ function setLang(lang) {
   }
 }
 
+/* ---------- Tải CV đúng theo ngôn ngữ đang chọn ---------- */
+function updateCVDownloadLinks(lang) {
+  document.querySelectorAll("[data-cv-download]").forEach((el) => {
+    const href = el.getAttribute("href");
+    if (!href) return;
+    const newHref =
+      lang === "en"
+        ? href.replace(/Dinh-Thi-To-Nhu-CV-(VI|EN)\.pdf/, "Dinh-Thi-To-Nhu-CV-EN.pdf")
+        : href.replace(/Dinh-Thi-To-Nhu-CV-(VI|EN)\.pdf/, "Dinh-Thi-To-Nhu-CV-VI.pdf");
+    el.setAttribute("href", newHref);
+    el.setAttribute("download", lang === "en" ? "Dinh-Thi-To-Nhu-CV-EN.pdf" : "Dinh-Thi-To-Nhu-CV-VI.pdf");
+  });
+}
+
 /* ---------- Áp dụng bản dịch cho toàn trang ---------- */
 function applyTranslations(lang) {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
@@ -408,6 +422,8 @@ function applyTranslations(lang) {
   document.querySelectorAll(".lang-toggle__select").forEach((select) => {
     select.value = lang;
   });
+
+  updateCVDownloadLinks(lang);
 }
 
 /* ---------- Dropdown chuyển đổi ngôn ngữ ---------- */
