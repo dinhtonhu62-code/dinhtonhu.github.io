@@ -225,7 +225,6 @@ const I18N = {
   "sonha.kw3": { vi: "Keyword Growth — \"sửa chữa thang máy\"", en: "Keyword Growth — \"elevator repair\"" },
   "sonha.kw4": { vi: "Keyword Growth — \"thang máy tải khách\"", en: "Keyword Growth — \"passenger elevator\"" },
   "sonha.kw5": { vi: "Keyword Growth — \"thang máy người khuyết tật\"", en: "Keyword Growth — \"elevator for disabled access\"" },
-  "sonha.pending": { vi: "Số liệu Before/After đang được cập nhật", en: "Before/After data coming soon" },
   "sonha.g4.eyebrow": { vi: "05. SEO Opportunity", en: "05. SEO Opportunity" },
   "sonha.g4.keyword": { vi: "Keyword: \"thang máy gia đình không phòng máy\"", en: "Keyword: \"machine-room-less home elevator\"" },
   "sonha.g4.desc": { vi: "Mức độ hiển thị tìm kiếm cao nhưng còn nhiều dư địa cải thiện về thứ hạng và CTR — được xác định là cơ hội tối ưu nội dung SEO.", en: "High search visibility with significant room for improvement in ranking and CTR, identified as an SEO content optimization opportunity." },
