@@ -123,7 +123,7 @@ function initTypingEffect() {
   const el = document.getElementById("typedText");
   if (!el) return;
 
-  const roles = ["AI Marketing Specialist", "Content Creator", "SEO On-page"];
+  const roles = ["Marketing Executive", "Content Creator", "SEO On-page"];
   let roleIndex = 0;
   let charIndex = 0;
   let isDeleting = false;

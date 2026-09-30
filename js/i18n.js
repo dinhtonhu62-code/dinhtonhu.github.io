@@ -20,7 +20,7 @@ const I18N = {
 
   /* ---- Hero ---- */
   "hero.greeting": { vi: "Xin chào, tôi là", en: "Hello, I'm" },
-  "hero.role.marketing": { vi: "AI Marketing Specialist", en: "AI Marketing Specialist" },
+  "hero.role.marketing": { vi: "Marketing Executive", en: "Marketing Executive" },
   "hero.role.content": { vi: "Content Creator", en: "Content Creator" },
   "hero.role.seo": { vi: "SEO On-page", en: "SEO On-page" },
   "hero.bio": {
