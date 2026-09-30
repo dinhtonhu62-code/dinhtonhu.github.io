@@ -1092,6 +1092,16 @@ textarea:focus-visible {
   margin-bottom: 20px;
 }
 
+.experience-hero__company a {
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+}
+
+.experience-hero__company a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
 .experience-hero__meta {
   display: flex;
   flex-wrap: wrap;
