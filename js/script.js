@@ -409,6 +409,7 @@ function initExpSlider() {
   const slider = document.querySelector(".exp-slider");
   if (!slider) return;
 
+  const viewport = slider.querySelector(".exp-slider__viewport");
   const track = slider.querySelector(".exp-slider__track");
   const cards = track.querySelectorAll(".exp-card");
   const dotsWrap = slider.querySelector(".exp-slider__dots");
@@ -419,9 +420,16 @@ function initExpSlider() {
 
   let index = 0;
 
+  /* Chỉnh chiều cao khung theo đúng thẻ đang hiển thị, tránh khoảng trống dư thừa */
+  function syncHeight() {
+    const activeCard = cards[index];
+    if (activeCard) viewport.style.height = `${activeCard.offsetHeight}px`;
+  }
+
   function update() {
     track.style.transform = `translateX(-${index * 100}%)`;
     dotsWrap.querySelectorAll(".exp-slider__dot").forEach((dot, i) => dot.classList.toggle("is-active", i === index));
+    syncHeight();
   }
 
   function goTo(i) {
@@ -475,6 +483,8 @@ function initExpSlider() {
   track.addEventListener("touchstart", (e) => onStart(e.touches[0].clientX), { passive: true });
   track.addEventListener("touchmove", (e) => onMove(e.touches[0].clientX), { passive: true });
   track.addEventListener("touchend", onEnd);
+
+  window.addEventListener("resize", syncHeight);
 
   update();
 }
