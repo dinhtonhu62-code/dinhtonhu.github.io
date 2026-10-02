@@ -145,6 +145,8 @@ const I18N = {
   "care.li2": { vi: "Phân tích phản hồi khách hàng để đề xuất cải thiện nội dung và sản phẩm", en: "Analyzed customer feedback to propose content and product improvements" },
   "care.li3": { vi: "Hỗ trợ tối ưu tỷ lệ chuyển đổi thông qua tư vấn khách hàng", en: "Helped optimize conversion rate through customer consultation" },
   "care.li4": { vi: "Phối hợp với bộ phận Content và Livestream", en: "Collaborated with the Content and Livestream teams" },
+  "care.result1": { vi: "Quản lý hơn 1.000 lượt tương tác với khách hàng mỗi tuần", en: "Managed 1,000+ customer interactions weekly" },
+  "care.result2": { vi: "Giảm 30% đánh giá tiêu cực nhờ phản hồi kịp thời và xử lý vấn đề hiệu quả", en: "Reduced negative reviews by 30% through timely responses and effective issue resolution" },
 
   /* ---- Huseco (Marketing Intern) ---- */
   "huseco.tagContent": { vi: "Content", en: "Content" },
